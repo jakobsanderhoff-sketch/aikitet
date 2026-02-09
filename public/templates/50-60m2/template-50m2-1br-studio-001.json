@@ -1,0 +1,175 @@
+{
+  "format": "svg-enhanced",
+  "metadata": {
+    "templateId": "template-50m2-1br-studio-001",
+    "projectName": "1BR Studio 50m²",
+    "location": "Denmark",
+    "buildingCode": "BR18/BR23",
+    "totalArea": 50,
+    "buildingType": "house",
+    "description": "Compact 1-bedroom studio with open living/sleeping area and efficient kitchen",
+    "tags": [
+      "1BR",
+      "studio",
+      "compact",
+      "open-plan",
+      "starter"
+    ],
+    "compliant": true
+  },
+  "exterior": {
+    "path": "M 0,0 L 7,0 L 7,7.5 L 0,7.5 Z",
+    "thickness": 0.3,
+    "material": "brick"
+  },
+  "divisions": [
+    {
+      "id": "div-1",
+      "path": "M 5,0 L 5,5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-2"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-2",
+      "path": "M 0,5 L 5,5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-1"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-3",
+      "path": "M 1.5,5 L 1.5,7.5",
+      "thickness": 0.12,
+      "connects": [
+        "div-2",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-4",
+      "path": "M 3,5 L 3,7.5",
+      "thickness": 0.12,
+      "connects": [
+        "div-2",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room-living",
+      "name": "Living/Sleeping Area",
+      "type": "Living Room",
+      "boundary": "M 0,0 L 5,0 L 5,5 L 0,5 Z",
+      "area": 22,
+      "features": [
+        "window:w-1",
+        "window:w-2",
+        "door:d-1"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-kitchen",
+      "name": "Kitchen",
+      "type": "Kitchen",
+      "boundary": "M 5,0 L 7,0 L 7,7.5 L 5,7.5 Z",
+      "area": 9,
+      "features": [
+        "window:w-3"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-entry",
+      "name": "Entry",
+      "type": "Hallway",
+      "boundary": "M 0,5 L 1.5,5 L 1.5,7.5 L 0,7.5 Z",
+      "area": 3,
+      "features": [
+        "door:d-2"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-storage",
+      "name": "Storage",
+      "type": "Storage",
+      "boundary": "M 1.5,5 L 3,5 L 3,7.5 L 1.5,7.5 Z",
+      "area": 2,
+      "features": [],
+      "compliance": []
+    },
+    {
+      "id": "room-bathroom",
+      "name": "Bathroom",
+      "type": "Bathroom",
+      "boundary": "M 3,5 L 5,5 L 5,7.5 L 3,7.5 Z",
+      "area": 5,
+      "features": [
+        "door:d-3"
+      ],
+      "compliance": []
+    }
+  ],
+  "openings": [
+    {
+      "id": "d-1",
+      "type": "door",
+      "onPath": "div-2",
+      "atPosition": 0.15,
+      "width": 0.9,
+      "swing": "right"
+    },
+    {
+      "id": "d-2",
+      "type": "door",
+      "onPath": "exterior",
+      "atPosition": 0.7,
+      "width": 1,
+      "swing": "left"
+    },
+    {
+      "id": "d-3",
+      "type": "door",
+      "onPath": "div-4",
+      "atPosition": 0.5,
+      "width": 0.9,
+      "swing": "none"
+    },
+    {
+      "id": "w-1",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.15,
+      "width": 1.5
+    },
+    {
+      "id": "w-2",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.45,
+      "width": 1.2
+    },
+    {
+      "id": "w-3",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.25,
+      "width": 1
+    }
+  ]
+}

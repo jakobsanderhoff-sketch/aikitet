@@ -1,0 +1,308 @@
+{
+  "format": "svg-enhanced",
+  "metadata": {
+    "templateId": "template-120m2-3br-2bath-006",
+    "projectName": "3BR + 2 Bath 120m²",
+    "location": "Denmark",
+    "buildingCode": "BR18/BR23",
+    "totalArea": 120,
+    "buildingType": "house",
+    "description": "Luxury 3-bedroom with master ensuite and family bathroom for comfort",
+    "tags": [
+      "3BR",
+      "ensuite",
+      "luxury",
+      "2-bathroom",
+      "master-suite"
+    ],
+    "compliant": true
+  },
+  "exterior": {
+    "path": "M 0,0 L 15,0 L 15,8 L 0,8 Z",
+    "thickness": 0.3,
+    "material": "brick"
+  },
+  "divisions": [
+    {
+      "id": "div-1",
+      "path": "M 0,5 L 10,5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-2"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-2",
+      "path": "M 10,0 L 10,8",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-3",
+      "path": "M 5,5 L 5,8",
+      "thickness": 0.12,
+      "connects": [
+        "div-1",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-4",
+      "path": "M 10,2.5 L 15,2.5",
+      "thickness": 0.12,
+      "connects": [
+        "div-2",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-5",
+      "path": "M 10,5.5 L 15,5.5",
+      "thickness": 0.12,
+      "connects": [
+        "div-2",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-6",
+      "path": "M 12.5,2.5 L 12.5,5.5",
+      "thickness": 0.12,
+      "connects": [
+        "div-4",
+        "div-5"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-7",
+      "path": "M 12.5,5.5 L 12.5,8",
+      "thickness": 0.12,
+      "connects": [
+        "div-5",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room-living",
+      "name": "Living Room",
+      "type": "Living Room",
+      "boundary": "M 0,0 L 10,0 L 10,5 L 0,5 Z",
+      "area": 50,
+      "features": [
+        "window:w-1",
+        "window:w-2",
+        "door:d-1"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-dining",
+      "name": "Dining Room",
+      "type": "Dining Room",
+      "boundary": "M 0,5 L 5,5 L 5,8 L 0,8 Z",
+      "area": 15,
+      "features": [
+        "window:w-3"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-kitchen",
+      "name": "Kitchen",
+      "type": "Kitchen",
+      "boundary": "M 5,5 L 10,5 L 10,8 L 5,8 Z",
+      "area": 15,
+      "features": [
+        "door:d-2"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom1",
+      "name": "Master Bedroom",
+      "type": "Bedroom",
+      "boundary": "M 10,0 L 15,0 L 15,2.5 L 10,2.5 Z",
+      "area": 12.5,
+      "features": [
+        "window:w-4",
+        "door:d-3",
+        "door:d-4"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-ensuite",
+      "name": "Master Ensuite",
+      "type": "Bathroom",
+      "boundary": "M 12.5,2.5 L 15,2.5 L 15,5.5 L 12.5,5.5 Z",
+      "area": 7.5,
+      "features": [
+        "window:w-5",
+        "door:d-5"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom2",
+      "name": "Bedroom 2",
+      "type": "Bedroom",
+      "boundary": "M 10,2.5 L 12.5,2.5 L 12.5,5.5 L 10,5.5 Z",
+      "area": 7.5,
+      "features": [
+        "door:d-6"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom3",
+      "name": "Bedroom 3",
+      "type": "Bedroom",
+      "boundary": "M 10,5.5 L 12.5,5.5 L 12.5,8 L 10,8 Z",
+      "area": 7.5,
+      "features": [
+        "window:w-6",
+        "door:d-7"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bathroom",
+      "name": "Family Bathroom",
+      "type": "Bathroom",
+      "boundary": "M 12.5,5.5 L 15,5.5 L 15,8 L 12.5,8 Z",
+      "area": 6.25,
+      "features": [
+        "door:d-8"
+      ],
+      "compliance": []
+    }
+  ],
+  "openings": [
+    {
+      "id": "d-1",
+      "type": "door",
+      "onPath": "exterior",
+      "atPosition": 0.06,
+      "width": 1,
+      "swing": "left"
+    },
+    {
+      "id": "d-2",
+      "type": "door",
+      "onPath": "div-3",
+      "atPosition": 0.5,
+      "width": 0.9,
+      "swing": "right"
+    },
+    {
+      "id": "d-3",
+      "type": "door",
+      "onPath": "div-2",
+      "atPosition": 0.15,
+      "width": 0.9,
+      "swing": "left"
+    },
+    {
+      "id": "d-4",
+      "type": "door",
+      "onPath": "div-4",
+      "atPosition": 0.2,
+      "width": 0.9,
+      "swing": "right"
+    },
+    {
+      "id": "d-5",
+      "type": "door",
+      "onPath": "div-6",
+      "atPosition": 0.5,
+      "width": 0.9,
+      "swing": "none"
+    },
+    {
+      "id": "d-6",
+      "type": "door",
+      "onPath": "div-2",
+      "atPosition": 0.48,
+      "width": 0.9,
+      "swing": "left"
+    },
+    {
+      "id": "d-7",
+      "type": "door",
+      "onPath": "div-2",
+      "atPosition": 0.82,
+      "width": 0.9,
+      "swing": "left"
+    },
+    {
+      "id": "d-8",
+      "type": "door",
+      "onPath": "div-7",
+      "atPosition": 0.5,
+      "width": 0.9,
+      "swing": "none"
+    },
+    {
+      "id": "w-1",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.15,
+      "width": 2.5
+    },
+    {
+      "id": "w-2",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.4,
+      "width": 2
+    },
+    {
+      "id": "w-3",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.78,
+      "width": 1.5
+    },
+    {
+      "id": "w-4",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.83,
+      "width": 1.5
+    },
+    {
+      "id": "w-5",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.53,
+      "width": 1
+    },
+    {
+      "id": "w-6",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.92,
+      "width": 1.2
+    }
+  ]
+}

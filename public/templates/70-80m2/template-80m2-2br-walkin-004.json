@@ -1,0 +1,191 @@
+{
+  "format": "svg-enhanced",
+  "metadata": {
+    "templateId": "template-80m2-2br-walkin-004",
+    "projectName": "2BR with Walk-in Closet 80m²",
+    "location": "Denmark",
+    "buildingCode": "BR18/BR23",
+    "totalArea": 80,
+    "buildingType": "house",
+    "description": "2-bedroom with master suite and luxurious walk-in closet",
+    "tags": [
+      "2BR",
+      "walk-in-closet",
+      "master-suite",
+      "luxury"
+    ],
+    "compliant": true
+  },
+  "exterior": {
+    "path": "M 0,0 L 11,0 L 11,7.5 L 0,7.5 Z",
+    "thickness": 0.3,
+    "material": "brick"
+  },
+  "divisions": [
+    {
+      "id": "div-1",
+      "path": "M 4.5,0 L 4.5,7.5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-2",
+      "path": "M 7.5,0 L 7.5,4.5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-3"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-3",
+      "path": "M 4.5,4.5 L 11,4.5",
+      "thickness": 0.12,
+      "connects": [
+        "div-1",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-4",
+      "path": "M 9.5,0 L 9.5,4.5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-3"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room-living",
+      "name": "Living/Dining",
+      "type": "Living Room",
+      "boundary": "M 0,0 L 4.5,0 L 4.5,7.5 L 0,7.5 Z",
+      "area": 30,
+      "features": [
+        "window:w-1",
+        "window:w-2",
+        "door:d-1"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-master",
+      "name": "Master Bedroom",
+      "type": "Bedroom",
+      "boundary": "M 4.5,0 L 7.5,0 L 7.5,4.5 L 4.5,4.5 Z",
+      "area": 12,
+      "features": [
+        "window:w-3",
+        "door:d-2"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom2",
+      "name": "Bedroom 2",
+      "type": "Bedroom",
+      "boundary": "M 7.5,0 L 9.5,0 L 9.5,4.5 L 7.5,4.5 Z",
+      "area": 8,
+      "features": [
+        "window:w-4"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-closet",
+      "name": "Walk-in Closet",
+      "type": "Storage",
+      "boundary": "M 9.5,0 L 11,0 L 11,4.5 L 9.5,4.5 Z",
+      "area": 6,
+      "features": [],
+      "compliance": []
+    },
+    {
+      "id": "room-kitchen",
+      "name": "Kitchen",
+      "type": "Kitchen",
+      "boundary": "M 4.5,4.5 L 7.5,4.5 L 7.5,7.5 L 4.5,7.5 Z",
+      "area": 8,
+      "features": [],
+      "compliance": []
+    },
+    {
+      "id": "room-bathroom",
+      "name": "Bathroom",
+      "type": "Bathroom",
+      "boundary": "M 7.5,4.5 L 11,4.5 L 11,7.5 L 7.5,7.5 Z",
+      "area": 10,
+      "features": [
+        "door:d-3"
+      ],
+      "compliance": []
+    }
+  ],
+  "openings": [
+    {
+      "id": "d-1",
+      "type": "door",
+      "onPath": "exterior",
+      "atPosition": 0.1,
+      "width": 1,
+      "swing": "left"
+    },
+    {
+      "id": "d-2",
+      "type": "door",
+      "onPath": "div-3",
+      "atPosition": 0.15,
+      "width": 0.9,
+      "swing": "right"
+    },
+    {
+      "id": "d-3",
+      "type": "door",
+      "onPath": "div-3",
+      "atPosition": 0.65,
+      "width": 0.9,
+      "swing": "none"
+    },
+    {
+      "id": "w-1",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.2,
+      "width": 1.5
+    },
+    {
+      "id": "w-2",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.55,
+      "width": 1.2
+    },
+    {
+      "id": "w-3",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.2,
+      "width": 1.2
+    },
+    {
+      "id": "w-4",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.3,
+      "width": 1.2
+    }
+  ]
+}

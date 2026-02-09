@@ -1,0 +1,175 @@
+{
+  "format": "svg-enhanced",
+  "metadata": {
+    "templateId": "template-58m2-1br-office-004",
+    "projectName": "1BR with Office Nook 58m²",
+    "location": "Denmark",
+    "buildingCode": "BR18/BR23",
+    "totalArea": 58,
+    "buildingType": "house",
+    "description": "1-bedroom with dedicated home office nook for remote work",
+    "tags": [
+      "1BR",
+      "home-office",
+      "work-from-home",
+      "modern"
+    ],
+    "compliant": true
+  },
+  "exterior": {
+    "path": "M 0,0 L 8,0 L 8,7.5 L 0,7.5 Z",
+    "thickness": 0.3,
+    "material": "brick"
+  },
+  "divisions": [
+    {
+      "id": "div-1",
+      "path": "M 5,0 L 5,5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-2"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-2",
+      "path": "M 0,5 L 8,5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-3",
+      "path": "M 2,5 L 2,7.5",
+      "thickness": 0.12,
+      "connects": [
+        "div-2",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-4",
+      "path": "M 5,5 L 5,7.5",
+      "thickness": 0.12,
+      "connects": [
+        "div-2",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room-living",
+      "name": "Living Room",
+      "type": "Living Room",
+      "boundary": "M 0,0 L 5,0 L 5,5 L 0,5 Z",
+      "area": 20,
+      "features": [
+        "window:w-1",
+        "door:d-1"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom",
+      "name": "Bedroom",
+      "type": "Bedroom",
+      "boundary": "M 5,0 L 8,0 L 8,5 L 5,5 Z",
+      "area": 12,
+      "features": [
+        "window:w-2"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-entry",
+      "name": "Entry",
+      "type": "Hallway",
+      "boundary": "M 0,5 L 2,5 L 2,7.5 L 0,7.5 Z",
+      "area": 4,
+      "features": [
+        "door:d-2"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-office",
+      "name": "Office Nook",
+      "type": "Office",
+      "boundary": "M 2,5 L 5,5 L 5,7.5 L 2,7.5 Z",
+      "area": 6,
+      "features": [
+        "window:w-3"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bathroom",
+      "name": "Bathroom",
+      "type": "Bathroom",
+      "boundary": "M 5,5 L 8,5 L 8,7.5 L 5,7.5 Z",
+      "area": 6,
+      "features": [
+        "door:d-3"
+      ],
+      "compliance": []
+    }
+  ],
+  "openings": [
+    {
+      "id": "d-1",
+      "type": "door",
+      "onPath": "div-2",
+      "atPosition": 0.15,
+      "width": 0.9,
+      "swing": "right"
+    },
+    {
+      "id": "d-2",
+      "type": "door",
+      "onPath": "exterior",
+      "atPosition": 0.7,
+      "width": 1,
+      "swing": "left"
+    },
+    {
+      "id": "d-3",
+      "type": "door",
+      "onPath": "div-4",
+      "atPosition": 0.5,
+      "width": 0.9,
+      "swing": "none"
+    },
+    {
+      "id": "w-1",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.15,
+      "width": 1.5
+    },
+    {
+      "id": "w-2",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.25,
+      "width": 1.2
+    },
+    {
+      "id": "w-3",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.75,
+      "width": 1
+    }
+  ]
+}

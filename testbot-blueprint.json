@@ -1,0 +1,128 @@
+{
+  "format": "svg-enhanced",
+  "metadata": {
+    "projectName": "TestBot Blueprint - 2 Bedroom 70m²",
+    "location": "Copenhagen, Denmark",
+    "buildingCode": "BR18/BR23",
+    "totalArea": 70,
+    "buildingType": "house",
+    "createdAt": "2026-02-02T00:00:00.000Z"
+  },
+  "exterior": {
+    "path": "M 0,0 L 10,0 L 10,7 L 0,7 Z",
+    "thickness": 0.3,
+    "material": "brick"
+  },
+  "divisions": [
+    {
+      "id": "div-1",
+      "path": "M 4,0 L 4,7",
+      "thickness": 0.12,
+      "connects": ["exterior", "exterior"],
+      "material": "gypsum",
+      "structural": false
+    },
+    {
+      "id": "div-2",
+      "path": "M 7,0 L 7,4",
+      "thickness": 0.12,
+      "connects": ["exterior", "div-3"],
+      "material": "gypsum",
+      "structural": false
+    },
+    {
+      "id": "div-3",
+      "path": "M 4,4 L 10,4",
+      "thickness": 0.12,
+      "connects": ["div-1", "exterior"],
+      "material": "gypsum",
+      "structural": false
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room-living",
+      "name": "Living Room",
+      "type": "Living Room",
+      "boundary": "M 0,0 L 4,0 L 4,7 L 0,7 Z",
+      "area": 28,
+      "features": ["window:w1", "door:d1"],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom1",
+      "name": "Bedroom 1",
+      "type": "Bedroom",
+      "boundary": "M 4,0 L 7,0 L 7,4 L 4,4 Z",
+      "area": 12,
+      "features": ["window:w2"],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom2",
+      "name": "Bedroom 2",
+      "type": "Bedroom",
+      "boundary": "M 7,0 L 10,0 L 10,4 L 7,4 Z",
+      "area": 12,
+      "features": ["window:w3"],
+      "compliance": []
+    },
+    {
+      "id": "room-kitchen",
+      "name": "Kitchen",
+      "type": "Kitchen",
+      "boundary": "M 4,4 L 7,4 L 7,7 L 4,7 Z",
+      "area": 9,
+      "features": [],
+      "compliance": []
+    },
+    {
+      "id": "room-bathroom",
+      "name": "Bathroom",
+      "type": "Bathroom",
+      "boundary": "M 7,4 L 10,4 L 10,7 L 7,7 Z",
+      "area": 9,
+      "features": ["door:d2"],
+      "compliance": []
+    }
+  ],
+  "openings": [
+    {
+      "id": "d1",
+      "type": "door",
+      "onPath": "exterior",
+      "atPosition": 0.1,
+      "width": 0.9,
+      "swing": "left"
+    },
+    {
+      "id": "d2",
+      "type": "door",
+      "onPath": "div-3",
+      "atPosition": 0.5,
+      "width": 0.8,
+      "swing": "right"
+    },
+    {
+      "id": "w1",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.7,
+      "width": 1.2
+    },
+    {
+      "id": "w2",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.25,
+      "width": 1.0
+    },
+    {
+      "id": "w3",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.4,
+      "width": 1.0
+    }
+  ]
+}

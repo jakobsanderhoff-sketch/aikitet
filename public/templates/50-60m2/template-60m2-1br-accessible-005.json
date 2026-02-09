@@ -1,0 +1,173 @@
+{
+  "format": "svg-enhanced",
+  "metadata": {
+    "templateId": "template-60m2-1br-accessible-005",
+    "projectName": "1BR Accessible 60m²",
+    "location": "Denmark",
+    "buildingCode": "BR18/BR23",
+    "totalArea": 60,
+    "buildingType": "house",
+    "description": "Wheelchair-accessible 1-bedroom with wide hallways and barrier-free bathroom",
+    "tags": [
+      "1BR",
+      "accessible",
+      "wheelchair",
+      "universal-design",
+      "barrier-free"
+    ],
+    "compliant": true
+  },
+  "exterior": {
+    "path": "M 0,0 L 8.5,0 L 8.5,7 L 0,7 Z",
+    "thickness": 0.3,
+    "material": "brick"
+  },
+  "divisions": [
+    {
+      "id": "div-1",
+      "path": "M 5.5,0 L 5.5,4",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-2"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-2",
+      "path": "M 0,4 L 8.5,4",
+      "thickness": 0.15,
+      "connects": [
+        "exterior",
+        "exterior"
+      ],
+      "material": "concrete",
+      "structural": true
+    },
+    {
+      "id": "div-3",
+      "path": "M 3,4 L 3,7",
+      "thickness": 0.12,
+      "connects": [
+        "div-2",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room-living",
+      "name": "Living Room",
+      "type": "Living Room",
+      "boundary": "M 0,0 L 5.5,0 L 5.5,4 L 0,4 Z",
+      "area": 19,
+      "features": [
+        "window:w-1",
+        "window:w-2",
+        "door:d-1"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom",
+      "name": "Bedroom",
+      "type": "Bedroom",
+      "boundary": "M 5.5,0 L 8.5,0 L 8.5,4 L 5.5,4 Z",
+      "area": 10,
+      "features": [
+        "window:w-3"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-hallway",
+      "name": "Wide Hallway",
+      "type": "Hallway",
+      "boundary": "M 0,4 L 3,4 L 3,7 L 0,7 Z",
+      "area": 8,
+      "features": [
+        "door:d-2"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bathroom",
+      "name": "Accessible Bathroom",
+      "type": "Bathroom",
+      "boundary": "M 3,4 L 5.5,4 L 5.5,7 L 3,7 Z",
+      "area": 7,
+      "features": [
+        "door:d-3"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-kitchen",
+      "name": "Kitchen",
+      "type": "Kitchen",
+      "boundary": "M 5.5,4 L 8.5,4 L 8.5,7 L 5.5,7 Z",
+      "area": 8,
+      "features": [
+        "window:w-4"
+      ],
+      "compliance": []
+    }
+  ],
+  "openings": [
+    {
+      "id": "d-1",
+      "type": "door",
+      "onPath": "div-2",
+      "atPosition": 0.2,
+      "width": 0.9,
+      "swing": "right"
+    },
+    {
+      "id": "d-2",
+      "type": "door",
+      "onPath": "exterior",
+      "atPosition": 0.65,
+      "width": 1,
+      "swing": "left"
+    },
+    {
+      "id": "d-3",
+      "type": "door",
+      "onPath": "div-3",
+      "atPosition": 0.5,
+      "width": 0.9,
+      "swing": "none"
+    },
+    {
+      "id": "w-1",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.15,
+      "width": 1.5
+    },
+    {
+      "id": "w-2",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.4,
+      "width": 1.2
+    },
+    {
+      "id": "w-3",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.25,
+      "width": 1.2
+    },
+    {
+      "id": "w-4",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.75,
+      "width": 1
+    }
+  ]
+}

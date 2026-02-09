@@ -1,0 +1,181 @@
+{
+  "format": "svg-enhanced",
+  "metadata": {
+    "templateId": "template-72m2-2br-lshaped-006",
+    "projectName": "2BR L-Shaped 72m²",
+    "location": "Denmark",
+    "buildingCode": "BR18/BR23",
+    "totalArea": 72,
+    "buildingType": "house",
+    "description": "Efficient L-shaped 2-bedroom layout for corner lots",
+    "tags": [
+      "2BR",
+      "L-shaped",
+      "corner-lot",
+      "efficient"
+    ],
+    "compliant": true
+  },
+  "exterior": {
+    "path": "M 0,0 L 10,0 L 10,4 L 6,4 L 6,8 L 0,8 Z",
+    "thickness": 0.3,
+    "material": "brick"
+  },
+  "divisions": [
+    {
+      "id": "div-1",
+      "path": "M 0,4 L 6,4",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-2",
+      "path": "M 6,0 L 6,4",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-1"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-3",
+      "path": "M 3,4 L 3,8",
+      "thickness": 0.12,
+      "connects": [
+        "div-1",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room-living",
+      "name": "Living Room",
+      "type": "Living Room",
+      "boundary": "M 0,0 L 6,0 L 6,4 L 0,4 Z",
+      "area": 22,
+      "features": [
+        "window:w-1",
+        "window:w-2",
+        "door:d-1"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom1",
+      "name": "Bedroom 1",
+      "type": "Bedroom",
+      "boundary": "M 6,0 L 10,0 L 10,4 L 6,4 Z",
+      "area": 15,
+      "features": [
+        "window:w-3"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-entry",
+      "name": "Entry/Hall",
+      "type": "Hallway",
+      "boundary": "M 0,4 L 3,4 L 3,8 L 0,8 Z",
+      "area": 11,
+      "features": [
+        "door:d-2"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom2",
+      "name": "Bedroom 2",
+      "type": "Bedroom",
+      "boundary": "M 3,4 L 6,4 L 6,6 L 3,6 Z",
+      "area": 5,
+      "features": [
+        "window:w-4"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-kitchen",
+      "name": "Kitchen",
+      "type": "Kitchen",
+      "boundary": "M 3,6 L 4.5,6 L 4.5,8 L 3,8 Z",
+      "area": 3,
+      "features": [],
+      "compliance": []
+    },
+    {
+      "id": "room-bathroom",
+      "name": "Bathroom",
+      "type": "Bathroom",
+      "boundary": "M 4.5,6 L 6,6 L 6,8 L 4.5,8 Z",
+      "area": 3,
+      "features": [
+        "door:d-3"
+      ],
+      "compliance": []
+    }
+  ],
+  "openings": [
+    {
+      "id": "d-1",
+      "type": "door",
+      "onPath": "div-1",
+      "atPosition": 0.15,
+      "width": 0.9,
+      "swing": "right"
+    },
+    {
+      "id": "d-2",
+      "type": "door",
+      "onPath": "exterior",
+      "atPosition": 0.65,
+      "width": 1,
+      "swing": "left"
+    },
+    {
+      "id": "d-3",
+      "type": "door",
+      "onPath": "div-3",
+      "atPosition": 0.75,
+      "width": 0.9,
+      "swing": "none"
+    },
+    {
+      "id": "w-1",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.2,
+      "width": 1.5
+    },
+    {
+      "id": "w-2",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.5,
+      "width": 1.2
+    },
+    {
+      "id": "w-3",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.15,
+      "width": 1.5
+    },
+    {
+      "id": "w-4",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.8,
+      "width": 1
+    }
+  ]
+}

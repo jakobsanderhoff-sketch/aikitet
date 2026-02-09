@@ -1,0 +1,184 @@
+{
+  "format": "svg-enhanced",
+  "metadata": {
+    "templateId": "template-76m2-2br-family-008",
+    "projectName": "2BR Family-Friendly 76m²",
+    "location": "Denmark",
+    "buildingCode": "BR18/BR23",
+    "totalArea": 76,
+    "buildingType": "house",
+    "description": "Family-friendly 2-bedroom with play area and child-safe design",
+    "tags": [
+      "2BR",
+      "family-friendly",
+      "kids",
+      "play-area",
+      "safe"
+    ],
+    "compliant": true
+  },
+  "exterior": {
+    "path": "M 0,0 L 10.5,0 L 10.5,7.5 L 0,7.5 Z",
+    "thickness": 0.3,
+    "material": "brick"
+  },
+  "divisions": [
+    {
+      "id": "div-1",
+      "path": "M 4.5,0 L 4.5,7.5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-2",
+      "path": "M 7.5,0 L 7.5,4.5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-3"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-3",
+      "path": "M 4.5,4.5 L 10.5,4.5",
+      "thickness": 0.12,
+      "connects": [
+        "div-1",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-4",
+      "path": "M 0,3.5 L 4.5,3.5",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-1"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room-living",
+      "name": "Living Room",
+      "type": "Living Room",
+      "boundary": "M 0,0 L 4.5,0 L 4.5,3.5 L 0,3.5 Z",
+      "area": 14,
+      "features": [
+        "window:w-1",
+        "door:d-1"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-play",
+      "name": "Play Area",
+      "type": "Living Room",
+      "boundary": "M 0,3.5 L 4.5,3.5 L 4.5,7.5 L 0,7.5 Z",
+      "area": 16,
+      "features": [
+        "window:w-2"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom1",
+      "name": "Children's Bedroom 1",
+      "type": "Bedroom",
+      "boundary": "M 4.5,0 L 7.5,0 L 7.5,4.5 L 4.5,4.5 Z",
+      "area": 12,
+      "features": [
+        "window:w-3"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom2",
+      "name": "Children's Bedroom 2",
+      "type": "Bedroom",
+      "boundary": "M 7.5,0 L 10.5,0 L 10.5,4.5 L 7.5,4.5 Z",
+      "area": 12,
+      "features": [
+        "window:w-4"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-kitchen",
+      "name": "Kitchen",
+      "type": "Kitchen",
+      "boundary": "M 4.5,4.5 L 7.5,4.5 L 7.5,7.5 L 4.5,7.5 Z",
+      "area": 8,
+      "features": [],
+      "compliance": []
+    },
+    {
+      "id": "room-bathroom",
+      "name": "Family Bathroom",
+      "type": "Bathroom",
+      "boundary": "M 7.5,4.5 L 10.5,4.5 L 10.5,7.5 L 7.5,7.5 Z",
+      "area": 8,
+      "features": [
+        "door:d-2"
+      ],
+      "compliance": []
+    }
+  ],
+  "openings": [
+    {
+      "id": "d-1",
+      "type": "door",
+      "onPath": "exterior",
+      "atPosition": 0.1,
+      "width": 1,
+      "swing": "left"
+    },
+    {
+      "id": "d-2",
+      "type": "door",
+      "onPath": "div-3",
+      "atPosition": 0.65,
+      "width": 0.9,
+      "swing": "none"
+    },
+    {
+      "id": "w-1",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.15,
+      "width": 1.5
+    },
+    {
+      "id": "w-2",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.75,
+      "width": 1.5
+    },
+    {
+      "id": "w-3",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.2,
+      "width": 1.2
+    },
+    {
+      "id": "w-4",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.35,
+      "width": 1.2
+    }
+  ]
+}

@@ -1,0 +1,714 @@
+{
+  "version": "1.0.0",
+  "totalTemplates": 50,
+  "lastUpdated": "2026-02-03",
+  "description": "50 BR18/BR23-compliant blueprint templates for AI architect Levi",
+  "categories": {
+    "50-60m2": {
+      "count": 10,
+      "description": "Compact 1-bedroom apartments and studios",
+      "areaRange": "50-60m²",
+      "bedrooms": "1BR",
+      "templates": [
+        {
+          "id": "template-50m2-1br-studio-001",
+          "name": "1BR Studio 50m²",
+          "path": "/templates/50-60m2/template-50m2-1br-studio-001.json",
+          "area": 50,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "style": "open-plan",
+          "tags": ["1BR", "studio", "compact", "open-plan", "starter"]
+        },
+        {
+          "id": "template-55m2-1br-alcove-002",
+          "name": "1BR with Alcove 55m²",
+          "path": "/templates/50-60m2/template-55m2-1br-alcove-002.json",
+          "area": 55,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "style": "flexible",
+          "tags": ["1BR", "alcove", "flexible", "murphy-bed", "compact"]
+        },
+        {
+          "id": "template-52m2-1br-efficiency-003",
+          "name": "1BR Efficiency 52m²",
+          "path": "/templates/50-60m2/template-52m2-1br-efficiency-003.json",
+          "area": 52,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "style": "efficiency",
+          "tags": ["1BR", "efficiency", "minimal-hallway", "compact"]
+        },
+        {
+          "id": "template-58m2-1br-office-004",
+          "name": "1BR with Office Nook 58m²",
+          "path": "/templates/50-60m2/template-58m2-1br-office-004.json",
+          "area": 58,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "style": "home-office",
+          "tags": ["1BR", "home-office", "work-from-home", "modern"]
+        },
+        {
+          "id": "template-60m2-1br-accessible-005",
+          "name": "1BR Accessible 60m²",
+          "path": "/templates/50-60m2/template-60m2-1br-accessible-005.json",
+          "area": 60,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "style": "accessible",
+          "tags": ["1BR", "accessible", "wheelchair", "universal-design", "barrier-free"]
+        },
+        {
+          "id": "template-54m2-1br-loft-006",
+          "name": "1BR Loft Style 54m²",
+          "path": "/templates/50-60m2/template-54m2-1br-loft-006.json",
+          "area": 54,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "style": "loft",
+          "tags": ["1BR", "loft", "high-ceiling", "open-plan", "modern"]
+        },
+        {
+          "id": "template-56m2-1br-balcony-007",
+          "name": "1BR with Balcony 56m²",
+          "path": "/templates/50-60m2/template-56m2-1br-balcony-007.json",
+          "area": 56,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "style": "outdoor-space",
+          "tags": ["1BR", "balcony", "outdoor-space", "modern"]
+        },
+        {
+          "id": "template-58m2-1br-lshaped-008",
+          "name": "1BR L-Shaped 58m²",
+          "path": "/templates/50-60m2/template-58m2-1br-lshaped-008.json",
+          "area": 58,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "style": "L-shaped",
+          "tags": ["1BR", "L-shaped", "corner-unit", "efficient"]
+        },
+        {
+          "id": "template-55m2-1br-storage-009",
+          "name": "1BR with Extra Storage 55m²",
+          "path": "/templates/50-60m2/template-55m2-1br-storage-009.json",
+          "area": 55,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "style": "storage",
+          "tags": ["1BR", "storage", "closets", "practical"]
+        },
+        {
+          "id": "template-60m2-1br-luxury-010",
+          "name": "1BR Compact Luxury 60m²",
+          "path": "/templates/50-60m2/template-60m2-1br-luxury-010.json",
+          "area": 60,
+          "bedrooms": 1,
+          "bathrooms": 2,
+          "style": "luxury",
+          "tags": ["1BR", "luxury", "premium", "walk-in-closet", "high-end"]
+        }
+      ]
+    },
+    "70-80m2": {
+      "count": 10,
+      "description": "Small 2-bedroom starter homes",
+      "areaRange": "70-80m²",
+      "bedrooms": "2BR",
+      "templates": [
+        {
+          "id": "template-70m2-2br-open-plan-001",
+          "name": "2BR Open Plan 70m²",
+          "path": "/templates/70-80m2/template-70m2-2br-open-plan-001.json",
+          "area": 70,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "open-plan",
+          "tags": ["2BR", "open-plan", "starter-home", "modern"]
+        },
+        {
+          "id": "template-75m2-2br-traditional-002",
+          "name": "2BR Traditional 75m²",
+          "path": "/templates/70-80m2/template-75m2-2br-traditional-002.json",
+          "area": 75,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "traditional",
+          "tags": ["2BR", "traditional", "separate-rooms", "classic"]
+        },
+        {
+          "id": "template-78m2-2br-office-003",
+          "name": "2BR with Home Office 78m²",
+          "path": "/templates/70-80m2/template-78m2-2br-office-003.json",
+          "area": 78,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "home-office",
+          "tags": ["2BR", "home-office", "work-from-home", "flexible"]
+        },
+        {
+          "id": "template-80m2-2br-walkin-004",
+          "name": "2BR with Walk-in Closet 80m²",
+          "path": "/templates/70-80m2/template-80m2-2br-walkin-004.json",
+          "area": 80,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "luxury",
+          "tags": ["2BR", "walk-in-closet", "master-suite", "luxury"]
+        },
+        {
+          "id": "template-75m2-2br-accessible-005",
+          "name": "2BR Accessible 75m²",
+          "path": "/templates/70-80m2/template-75m2-2br-accessible-005.json",
+          "area": 75,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "accessible",
+          "tags": ["2BR", "accessible", "wheelchair", "barrier-free", "universal-design"]
+        },
+        {
+          "id": "template-72m2-2br-lshaped-006",
+          "name": "2BR L-Shaped 72m²",
+          "path": "/templates/70-80m2/template-72m2-2br-lshaped-006.json",
+          "area": 72,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "L-shaped",
+          "tags": ["2BR", "L-shaped", "corner-lot", "efficient"]
+        },
+        {
+          "id": "template-78m2-2br-terrace-007",
+          "name": "2BR with Terrace 78m²",
+          "path": "/templates/70-80m2/template-78m2-2br-terrace-007.json",
+          "area": 78,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "outdoor-space",
+          "tags": ["2BR", "terrace", "outdoor-space", "modern"]
+        },
+        {
+          "id": "template-76m2-2br-family-008",
+          "name": "2BR Family-Friendly 76m²",
+          "path": "/templates/70-80m2/template-76m2-2br-family-008.json",
+          "area": 76,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "family-friendly",
+          "tags": ["2BR", "family-friendly", "kids", "play-area", "safe"]
+        },
+        {
+          "id": "template-74m2-2br-modern-009",
+          "name": "2BR Modern 74m²",
+          "path": "/templates/70-80m2/template-74m2-2br-modern-009.json",
+          "area": 74,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "modern",
+          "tags": ["2BR", "modern", "minimalist", "clean-design"]
+        },
+        {
+          "id": "template-70m2-2br-starter-010",
+          "name": "2BR Starter Home 70m²",
+          "path": "/templates/70-80m2/template-70m2-2br-starter-010.json",
+          "area": 70,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "budget",
+          "tags": ["2BR", "starter-home", "budget-friendly", "efficient", "first-home"]
+        }
+      ]
+    },
+    "100-120m2": {
+      "count": 10,
+      "description": "Medium 2-3 bedroom family homes",
+      "areaRange": "100-120m²",
+      "bedrooms": "2-3BR",
+      "templates": [
+        {
+          "id": "template-100m2-3br-family-001",
+          "name": "3BR Family Home 100m²",
+          "path": "/templates/100-120m2/template-100m2-3br-family-001.json",
+          "area": 100,
+          "bedrooms": 3,
+          "bathrooms": 1,
+          "style": "traditional",
+          "tags": ["3BR", "family", "traditional"]
+        },
+        {
+          "id": "template-105m2-3br-open-002",
+          "name": "3BR Open Concept 105m²",
+          "path": "/templates/100-120m2/template-105m2-3br-open-002.json",
+          "area": 105,
+          "bedrooms": 3,
+          "bathrooms": 1,
+          "style": "modern",
+          "tags": ["3BR", "open-concept", "modern"]
+        },
+        {
+          "id": "template-110m2-2br-office-guest-003",
+          "name": "2BR + Office + Guest 110m²",
+          "path": "/templates/100-120m2/template-110m2-2br-office-guest-003.json",
+          "area": 110,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "style": "flexible",
+          "tags": ["2BR", "home-office", "guest-room", "flexible"]
+        },
+        {
+          "id": "template-115m2-3br-split-004",
+          "name": "3BR Split-Level 115m²",
+          "path": "/templates/100-120m2/template-115m2-3br-split-004.json",
+          "area": 115,
+          "bedrooms": 3,
+          "bathrooms": 1,
+          "style": "split-level",
+          "tags": ["3BR", "split-level", "zoning"]
+        },
+        {
+          "id": "template-108m2-3br-pantry-005",
+          "name": "3BR + Pantry 108m²",
+          "path": "/templates/100-120m2/template-108m2-3br-pantry-005.json",
+          "area": 108,
+          "bedrooms": 3,
+          "bathrooms": 1,
+          "style": "storage",
+          "tags": ["3BR", "pantry", "storage"]
+        },
+        {
+          "id": "template-120m2-3br-2bath-006",
+          "name": "3BR + 2 Bath 120m²",
+          "path": "/templates/100-120m2/template-120m2-3br-2bath-006.json",
+          "area": 120,
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "style": "luxury",
+          "tags": ["3BR", "2-bathrooms", "luxury"]
+        },
+        {
+          "id": "template-112m2-3br-lshaped-007",
+          "name": "3BR L-Shaped 112m²",
+          "path": "/templates/100-120m2/template-112m2-3br-lshaped-007.json",
+          "area": 112,
+          "bedrooms": 3,
+          "bathrooms": 1,
+          "style": "L-shaped",
+          "tags": ["3BR", "L-shaped", "corner-lot"]
+        },
+        {
+          "id": "template-118m2-3br-playroom-008",
+          "name": "3BR + Playroom 118m²",
+          "path": "/templates/100-120m2/template-118m2-3br-playroom-008.json",
+          "area": 118,
+          "bedrooms": 3,
+          "bathrooms": 1,
+          "style": "family",
+          "tags": ["3BR", "playroom", "family"]
+        },
+        {
+          "id": "template-110m2-3br-accessible-009",
+          "name": "3BR Accessible 110m²",
+          "path": "/templates/100-120m2/template-110m2-3br-accessible-009.json",
+          "area": 110,
+          "bedrooms": 3,
+          "bathrooms": 1,
+          "style": "accessible",
+          "tags": ["3BR", "accessible", "universal-design"]
+        },
+        {
+          "id": "template-105m2-3br-laundry-010",
+          "name": "3BR + Laundry Room 105m²",
+          "path": "/templates/100-120m2/template-105m2-3br-laundry-010.json",
+          "area": 105,
+          "bedrooms": 3,
+          "bathrooms": 1,
+          "style": "practical",
+          "tags": ["3BR", "laundry-room", "convenience"]
+        }
+      ]
+    },
+    "150-180m2": {
+      "count": 10,
+      "description": "Large 3-4 bedroom houses",
+      "areaRange": "150-180m²",
+      "bedrooms": "3-4BR",
+      "templates": [
+        {
+          "id": "template-150m2-4br-estate-001",
+          "name": "4BR Family Estate 150m²",
+          "path": "/templates/150-180m2/template-150m2-4br-estate-001.json",
+          "area": 150,
+          "bedrooms": 4,
+          "bathrooms": 2,
+          "style": "traditional",
+          "tags": ["4BR", "estate", "traditional"]
+        },
+        {
+          "id": "template-165m2-4br-villa-002",
+          "name": "4BR Modern Villa 165m²",
+          "path": "/templates/150-180m2/template-165m2-4br-villa-002.json",
+          "area": 165,
+          "bedrooms": 4,
+          "bathrooms": 2,
+          "style": "modern",
+          "tags": ["4BR", "villa", "modern", "open-spaces"]
+        },
+        {
+          "id": "template-160m2-3br-office-guest-003",
+          "name": "3BR + Office + Guest 160m²",
+          "path": "/templates/150-180m2/template-160m2-3br-office-guest-003.json",
+          "area": 160,
+          "bedrooms": 3,
+          "bathrooms": 2,
+          "style": "professional",
+          "tags": ["3BR", "office", "guest-suite", "professional"]
+        },
+        {
+          "id": "template-175m2-4br-2.5bath-004",
+          "name": "4BR + 2.5 Bath 175m²",
+          "path": "/templates/150-180m2/template-175m2-4br-2.5bath-004.json",
+          "area": 175,
+          "bedrooms": 4,
+          "bathrooms": 3,
+          "style": "luxury",
+          "tags": ["4BR", "2.5-bathrooms", "luxury"]
+        },
+        {
+          "id": "template-170m2-4br-bonus-005",
+          "name": "4BR + Bonus Room 170m²",
+          "path": "/templates/150-180m2/template-170m2-4br-bonus-005.json",
+          "area": 170,
+          "bedrooms": 4,
+          "bathrooms": 2,
+          "style": "flexible",
+          "tags": ["4BR", "bonus-room", "flexible"]
+        },
+        {
+          "id": "template-155m2-4br-lshaped-006",
+          "name": "4BR L-Shaped 155m²",
+          "path": "/templates/150-180m2/template-155m2-4br-lshaped-006.json",
+          "area": 155,
+          "bedrooms": 4,
+          "bathrooms": 2,
+          "style": "L-shaped",
+          "tags": ["4BR", "L-shaped", "courtyard"]
+        },
+        {
+          "id": "template-168m2-4br-split-007",
+          "name": "4BR Split-Level 168m²",
+          "path": "/templates/150-180m2/template-168m2-4br-split-007.json",
+          "area": 168,
+          "bedrooms": 4,
+          "bathrooms": 2,
+          "style": "multi-gen",
+          "tags": ["4BR", "split-level", "multi-generational"]
+        },
+        {
+          "id": "template-180m2-4br-media-008",
+          "name": "4BR + Media Room 180m²",
+          "path": "/templates/150-180m2/template-180m2-4br-media-008.json",
+          "area": 180,
+          "bedrooms": 4,
+          "bathrooms": 2,
+          "style": "entertainment",
+          "tags": ["4BR", "media-room", "entertainment"]
+        },
+        {
+          "id": "template-165m2-4br-accessible-009",
+          "name": "4BR Accessible 165m²",
+          "path": "/templates/150-180m2/template-165m2-4br-accessible-009.json",
+          "area": 165,
+          "bedrooms": 4,
+          "bathrooms": 2,
+          "style": "accessible",
+          "tags": ["4BR", "accessible", "aging-in-place"]
+        },
+        {
+          "id": "template-158m2-4br-mudroom-010",
+          "name": "4BR + Mudroom 158m²",
+          "path": "/templates/150-180m2/template-158m2-4br-mudroom-010.json",
+          "area": 158,
+          "bedrooms": 4,
+          "bathrooms": 2,
+          "style": "practical",
+          "tags": ["4BR", "mudroom", "practical"]
+        }
+      ]
+    },
+    "200-250m2": {
+      "count": 10,
+      "description": "Spacious 4-5 bedroom luxury homes",
+      "areaRange": "200-250m²",
+      "bedrooms": "4-5BR",
+      "templates": [
+        {
+          "id": "template-200m2-5br-executive-001",
+          "name": "5BR Executive Home 200m²",
+          "path": "/templates/200-250m2/template-200m2-5br-executive-001.json",
+          "area": 200,
+          "bedrooms": 5,
+          "bathrooms": 3,
+          "style": "executive",
+          "tags": ["5BR", "executive", "prestigious"]
+        },
+        {
+          "id": "template-220m2-4br-3bath-002",
+          "name": "4BR + 3 Bath Luxury 220m²",
+          "path": "/templates/200-250m2/template-220m2-4br-3bath-002.json",
+          "area": 220,
+          "bedrooms": 4,
+          "bathrooms": 3,
+          "style": "luxury",
+          "tags": ["4BR", "3-bathrooms", "high-end"]
+        },
+        {
+          "id": "template-240m2-5br-multigenerational-003",
+          "name": "5BR Multigenerational 240m²",
+          "path": "/templates/200-250m2/template-240m2-5br-multigenerational-003.json",
+          "area": 240,
+          "bedrooms": 6,
+          "bathrooms": 3,
+          "style": "multi-gen",
+          "tags": ["5BR", "multigenerational", "separate-wings"]
+        },
+        {
+          "id": "template-230m2-4br-office-gym-004",
+          "name": "4BR + Office + Gym 230m²",
+          "path": "/templates/200-250m2/template-230m2-4br-office-gym-004.json",
+          "area": 230,
+          "bedrooms": 4,
+          "bathrooms": 3,
+          "style": "wellness",
+          "tags": ["4BR", "office", "gym", "wellness"]
+        },
+        {
+          "id": "template-215m2-5br-library-005",
+          "name": "5BR + Library 215m²",
+          "path": "/templates/200-250m2/template-215m2-5br-library-005.json",
+          "area": 215,
+          "bedrooms": 5,
+          "bathrooms": 3,
+          "style": "refined",
+          "tags": ["5BR", "library", "refined"]
+        },
+        {
+          "id": "template-235m2-4br-theater-006",
+          "name": "4BR + Home Theater 235m²",
+          "path": "/templates/200-250m2/template-235m2-4br-theater-006.json",
+          "area": 235,
+          "bedrooms": 4,
+          "bathrooms": 3,
+          "style": "entertainment",
+          "tags": ["4BR", "home-theater", "entertainment"]
+        },
+        {
+          "id": "template-250m2-5br-estate-007",
+          "name": "5BR Estate 250m²",
+          "path": "/templates/200-250m2/template-250m2-5br-estate-007.json",
+          "area": 250,
+          "bedrooms": 5,
+          "bathrooms": 2,
+          "style": "estate",
+          "tags": ["5BR", "estate", "maximum-luxury"]
+        },
+        {
+          "id": "template-225m2-4br-inlaw-008",
+          "name": "4BR + In-law Suite 225m²",
+          "path": "/templates/200-250m2/template-225m2-4br-inlaw-008.json",
+          "area": 225,
+          "bedrooms": 5,
+          "bathrooms": 3,
+          "style": "flexible",
+          "tags": ["4BR", "in-law-suite", "flexible"]
+        },
+        {
+          "id": "template-245m2-5br-wine-009",
+          "name": "5BR + Wine Cellar 245m²",
+          "path": "/templates/200-250m2/template-245m2-5br-wine-009.json",
+          "area": 245,
+          "bedrooms": 5,
+          "bathrooms": 2,
+          "style": "connoisseur",
+          "tags": ["5BR", "wine-cellar", "connoisseur"]
+        },
+        {
+          "id": "template-210m2-4br-studio-010",
+          "name": "4BR + Art Studio 210m²",
+          "path": "/templates/200-250m2/template-210m2-4br-studio-010.json",
+          "area": 210,
+          "bedrooms": 4,
+          "bathrooms": 2,
+          "style": "creative",
+          "tags": ["4BR", "art-studio", "creative"]
+        }
+      ]
+    }
+  },
+  "filters": {
+    "byBedrooms": {
+      "1BR": [
+        "template-50m2-1br-studio-001",
+        "template-55m2-1br-alcove-002",
+        "template-52m2-1br-efficiency-003",
+        "template-58m2-1br-office-004",
+        "template-60m2-1br-accessible-005",
+        "template-54m2-1br-loft-006",
+        "template-56m2-1br-balcony-007",
+        "template-58m2-1br-lshaped-008",
+        "template-55m2-1br-storage-009",
+        "template-60m2-1br-luxury-010"
+      ],
+      "2BR": [
+        "template-70m2-2br-open-plan-001",
+        "template-75m2-2br-traditional-002",
+        "template-78m2-2br-office-003",
+        "template-80m2-2br-walkin-004",
+        "template-75m2-2br-accessible-005",
+        "template-72m2-2br-lshaped-006",
+        "template-78m2-2br-terrace-007",
+        "template-76m2-2br-family-008",
+        "template-74m2-2br-modern-009",
+        "template-70m2-2br-starter-010",
+        "template-110m2-2br-office-guest-003"
+      ],
+      "3BR": [
+        "template-100m2-3br-family-001",
+        "template-105m2-3br-open-002",
+        "template-115m2-3br-split-004",
+        "template-108m2-3br-pantry-005",
+        "template-120m2-3br-2bath-006",
+        "template-112m2-3br-lshaped-007",
+        "template-118m2-3br-playroom-008",
+        "template-110m2-3br-accessible-009",
+        "template-105m2-3br-laundry-010",
+        "template-160m2-3br-office-guest-003"
+      ],
+      "4BR": [
+        "template-150m2-4br-estate-001",
+        "template-165m2-4br-villa-002",
+        "template-175m2-4br-2.5bath-004",
+        "template-170m2-4br-bonus-005",
+        "template-155m2-4br-lshaped-006",
+        "template-168m2-4br-split-007",
+        "template-180m2-4br-media-008",
+        "template-165m2-4br-accessible-009",
+        "template-158m2-4br-mudroom-010",
+        "template-220m2-4br-3bath-002",
+        "template-230m2-4br-office-gym-004",
+        "template-235m2-4br-theater-006",
+        "template-225m2-4br-inlaw-008",
+        "template-210m2-4br-studio-010"
+      ],
+      "5BR": [
+        "template-200m2-5br-executive-001",
+        "template-240m2-5br-multigenerational-003",
+        "template-215m2-5br-library-005",
+        "template-250m2-5br-estate-007",
+        "template-245m2-5br-wine-009"
+      ]
+    },
+    "byStyle": {
+      "open-plan": [
+        "template-50m2-1br-studio-001",
+        "template-54m2-1br-loft-006",
+        "template-70m2-2br-open-plan-001",
+        "template-105m2-3br-open-002"
+      ],
+      "traditional": [
+        "template-75m2-2br-traditional-002",
+        "template-100m2-3br-family-001",
+        "template-150m2-4br-estate-001"
+      ],
+      "modern": [
+        "template-58m2-1br-office-004",
+        "template-56m2-1br-balcony-007",
+        "template-74m2-2br-modern-009",
+        "template-78m2-2br-terrace-007",
+        "template-105m2-3br-open-002",
+        "template-165m2-4br-villa-002"
+      ],
+      "accessible": [
+        "template-60m2-1br-accessible-005",
+        "template-75m2-2br-accessible-005",
+        "template-110m2-3br-accessible-009",
+        "template-165m2-4br-accessible-009"
+      ],
+      "L-shaped": [
+        "template-58m2-1br-lshaped-008",
+        "template-72m2-2br-lshaped-006",
+        "template-112m2-3br-lshaped-007",
+        "template-155m2-4br-lshaped-006"
+      ],
+      "luxury": [
+        "template-60m2-1br-luxury-010",
+        "template-80m2-2br-walkin-004",
+        "template-120m2-3br-2bath-006",
+        "template-175m2-4br-2.5bath-004",
+        "template-220m2-4br-3bath-002",
+        "template-250m2-5br-estate-007"
+      ]
+    },
+    "byFeature": {
+      "office": [
+        "template-58m2-1br-office-004",
+        "template-78m2-2br-office-003",
+        "template-110m2-2br-office-guest-003",
+        "template-160m2-3br-office-guest-003",
+        "template-230m2-4br-office-gym-004"
+      ],
+      "accessible": [
+        "template-60m2-1br-accessible-005",
+        "template-75m2-2br-accessible-005",
+        "template-110m2-3br-accessible-009",
+        "template-165m2-4br-accessible-009"
+      ],
+      "outdoor-space": [
+        "template-56m2-1br-balcony-007",
+        "template-78m2-2br-terrace-007"
+      ],
+      "storage": [
+        "template-55m2-1br-storage-009",
+        "template-108m2-3br-pantry-005",
+        "template-158m2-4br-mudroom-010"
+      ],
+      "entertainment": [
+        "template-180m2-4br-media-008",
+        "template-235m2-4br-theater-006"
+      ],
+      "family": [
+        "template-76m2-2br-family-008",
+        "template-100m2-3br-family-001",
+        "template-118m2-3br-playroom-008"
+      ]
+    }
+  },
+  "quickSearch": {
+    "starter": ["template-70m2-2br-starter-010", "template-70m2-2br-open-plan-001"],
+    "work-from-home": [
+      "template-58m2-1br-office-004",
+      "template-78m2-2br-office-003",
+      "template-110m2-2br-office-guest-003",
+      "template-160m2-3br-office-guest-003",
+      "template-230m2-4br-office-gym-004"
+    ],
+    "family": [
+      "template-76m2-2br-family-008",
+      "template-100m2-3br-family-001",
+      "template-118m2-3br-playroom-008",
+      "template-150m2-4br-estate-001"
+    ],
+    "luxury": [
+      "template-60m2-1br-luxury-010",
+      "template-120m2-3br-2bath-006",
+      "template-175m2-4br-2.5bath-004",
+      "template-220m2-4br-3bath-002",
+      "template-250m2-5br-estate-007"
+    ],
+    "compact": [
+      "template-50m2-1br-studio-001",
+      "template-52m2-1br-efficiency-003",
+      "template-54m2-1br-loft-006"
+    ]
+  }
+}

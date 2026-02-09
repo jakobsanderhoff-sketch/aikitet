@@ -1,0 +1,195 @@
+{
+  "format": "svg-enhanced",
+  "metadata": {
+    "templateId": "template-55m2-1br-storage-009",
+    "projectName": "1BR with Extra Storage 55m²",
+    "location": "Denmark",
+    "buildingCode": "BR18/BR23",
+    "totalArea": 55,
+    "buildingType": "house",
+    "description": "1-bedroom with generous closet and storage space throughout",
+    "tags": [
+      "1BR",
+      "storage",
+      "closets",
+      "practical"
+    ],
+    "compliant": true
+  },
+  "exterior": {
+    "path": "M 0,0 L 8,0 L 8,7 L 0,7 Z",
+    "thickness": 0.3,
+    "material": "brick"
+  },
+  "divisions": [
+    {
+      "id": "div-1",
+      "path": "M 5,0 L 5,4",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "div-2"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-2",
+      "path": "M 0,4 L 8,4",
+      "thickness": 0.12,
+      "connects": [
+        "exterior",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-3",
+      "path": "M 1.5,4 L 1.5,7",
+      "thickness": 0.12,
+      "connects": [
+        "div-2",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-4",
+      "path": "M 3,4 L 3,7",
+      "thickness": 0.12,
+      "connects": [
+        "div-2",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    },
+    {
+      "id": "div-5",
+      "path": "M 5,4 L 5,7",
+      "thickness": 0.12,
+      "connects": [
+        "div-2",
+        "exterior"
+      ],
+      "material": "gypsum-board",
+      "structural": false
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room-living",
+      "name": "Living Room",
+      "type": "Living Room",
+      "boundary": "M 0,0 L 5,0 L 5,4 L 0,4 Z",
+      "area": 18,
+      "features": [
+        "window:w-1",
+        "door:d-1"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-bedroom",
+      "name": "Bedroom",
+      "type": "Bedroom",
+      "boundary": "M 5,0 L 8,0 L 8,4 L 5,4 Z",
+      "area": 10,
+      "features": [
+        "window:w-2"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-entry",
+      "name": "Entry",
+      "type": "Hallway",
+      "boundary": "M 0,4 L 1.5,4 L 1.5,7 L 0,7 Z",
+      "area": 4,
+      "features": [
+        "door:d-2"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-storage1",
+      "name": "Storage Closet",
+      "type": "Storage",
+      "boundary": "M 1.5,4 L 3,4 L 3,7 L 1.5,7 Z",
+      "area": 4,
+      "features": [],
+      "compliance": []
+    },
+    {
+      "id": "room-bathroom",
+      "name": "Bathroom",
+      "type": "Bathroom",
+      "boundary": "M 3,4 L 5,4 L 5,7 L 3,7 Z",
+      "area": 5,
+      "features": [
+        "door:d-3"
+      ],
+      "compliance": []
+    },
+    {
+      "id": "room-kitchen",
+      "name": "Kitchen",
+      "type": "Kitchen",
+      "boundary": "M 5,4 L 8,4 L 8,7 L 5,7 Z",
+      "area": 8,
+      "features": [
+        "window:w-3"
+      ],
+      "compliance": []
+    }
+  ],
+  "openings": [
+    {
+      "id": "d-1",
+      "type": "door",
+      "onPath": "div-2",
+      "atPosition": 0.15,
+      "width": 0.9,
+      "swing": "right"
+    },
+    {
+      "id": "d-2",
+      "type": "door",
+      "onPath": "exterior",
+      "atPosition": 0.65,
+      "width": 1,
+      "swing": "left"
+    },
+    {
+      "id": "d-3",
+      "type": "door",
+      "onPath": "div-4",
+      "atPosition": 0.5,
+      "width": 0.9,
+      "swing": "none"
+    },
+    {
+      "id": "w-1",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.15,
+      "width": 1.5
+    },
+    {
+      "id": "w-2",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.25,
+      "width": 1.2
+    },
+    {
+      "id": "w-3",
+      "type": "window",
+      "onPath": "exterior",
+      "atPosition": 0.75,
+      "width": 1
+    }
+  ]
+}

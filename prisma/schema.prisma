@@ -1,0 +1,73 @@
+// AI Architect Database Schema
+// Simplified schema for single-user project management (no authentication)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Project model (main container for blueprints)
+model Project {
+  id            String    @id @default(cuid())
+  name          String
+  description   String?
+  location      String?
+  buildingCode  String    @default("BR18/BR23")
+  blueprintData Json      // Full BlueprintData JSON
+  thumbnail     String?   // Base64 or URL to preview image
+  sheets        Sheet[]
+  versions      ProjectVersion[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  lastOpenedAt  DateTime  @default(now())
+
+  @@index([updatedAt])
+}
+
+// Sheet model (individual floor plans, elevations, etc.)
+model Sheet {
+  id          String   @id @default(cuid())
+  projectId   String
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  number      String   // "A-101", "A-201", etc.
+  title       String
+  type        String   @default("FLOOR_PLAN") // FLOOR_PLAN, ELEVATION, SECTION, DETAIL
+  scale       String   @default("1:100")
+  data        Json     // Sheet-specific elements (walls, openings, rooms)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([projectId, number])
+  @@index([projectId])
+}
+
+// Version history (Git-like commits)
+model ProjectVersion {
+  id            String   @id @default(cuid())
+  projectId     String
+  project       Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  version       Int
+  blueprintData Json     // Snapshot of BlueprintData at this version
+  message       String?  // Commit message
+  createdAt     DateTime @default(now())
+
+  @@unique([projectId, version])
+  @@index([projectId])
+}
+
+// Waitlist signups for early access
+model WaitlistSignup {
+  id             String   @id @default(cuid())
+  email          String   @unique
+  name           String?
+  company        String?
+  role           String?
+  referralSource String?
+  createdAt      DateTime @default(now())
+
+  @@index([createdAt])
+}

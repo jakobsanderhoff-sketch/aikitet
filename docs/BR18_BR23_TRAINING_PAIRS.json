@@ -1,0 +1,1317 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "date": "2026-01-14",
+    "purpose": "Fine-tuning dataset for Gemini AI to generate BR18/BR23 compliant blueprints",
+    "total_examples": 144,
+    "building_code": "BR18/BR23 (Danish Building Regulations)",
+    "categories": [
+      "Room Areas (BR18-5.2.x)",
+      "Ceiling Heights (BR18-5.1.1)",
+      "Door Widths (BR18-3.1.1)",
+      "Window Placement (BR23)",
+      "Natural Light Calculations (BR23)",
+      "Wall Construction",
+      "Fire Safety/Egress (BR18-5.4.1)",
+      "Complete Floor Plans"
+    ]
+  },
+
+  "training_examples": [
+    {
+      "id": "room_bedroom_minimum_001",
+      "category": "Room Areas (BR18-5.2.x)",
+      "regulation": "BR18-5.2.3",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "Design a bedroom with minimum allowed dimensions for BR18/BR23 compliance",
+        "context": "Single-family house, standard ceiling construction"
+      },
+      "output": {
+        "blueprint_fragment": {
+          "room": {
+            "id": "r1",
+            "label": "Bedroom",
+            "area": { "value": 6.5, "unit": "m²" },
+            "polygon": [
+              { "x": 0.5, "y": 0.5 },
+              { "x": 3.0, "y": 0.5 },
+              { "x": 3.0, "y": 3.1 },
+              { "x": 0.5, "y": 3.1 }
+            ],
+            "ceilingHeight": 2.35,
+            "flooring": "oak-parquet"
+          },
+          "windows": [
+            {
+              "id": "w1",
+              "wallId": "w2",
+              "type": "window",
+              "width": 1.2,
+              "height": 1.5,
+              "distFromStart": 0.75
+            }
+          ]
+        },
+        "compliance_validation": {
+          "room_area_check": {
+            "measured": 6.5,
+            "minimum_required": 6.0,
+            "code_reference": "BR18-5.2.3",
+            "status": "PASS",
+            "margin": 0.5,
+            "explanation": "Bedroom area 6.5m² exceeds minimum 6m² by 0.5m²"
+          },
+          "ceiling_height_check": {
+            "measured": 2.35,
+            "minimum_required": 2.30,
+            "code_reference": "BR18-5.1.1",
+            "status": "PASS",
+            "margin": 0.05,
+            "explanation": "Ceiling height 2.35m exceeds minimum 2.30m for habitable rooms"
+          },
+          "natural_light_check": {
+            "window_area": 1.8,
+            "floor_area": 6.5,
+            "ratio": 0.277,
+            "minimum_required_ratio": 0.10,
+            "code_reference": "BR23",
+            "status": "PASS",
+            "explanation": "Window area 1.8m² = 27.7% of floor area (≥10% required)"
+          }
+        },
+        "design_notes": [
+          "Used 2.5m × 2.6m internal dimensions for 6.5m² area",
+          "Added 0.5m² margin above minimum 6m² for furniture flexibility",
+          "Standard window (1.2m × 1.5m = 1.8m²) provides 27.7% natural light",
+          "Ceiling height 2.35m (standard 2.4m floor-to-floor minus 0.05m structure)",
+          "Oak parquet flooring suitable for bedroom use"
+        ]
+      },
+      "common_mistakes": [
+        {
+          "mistake": "Using 5.5m² area (below minimum)",
+          "consequence": "BR18-5.2.3 violation - insufficient space for bed and circulation",
+          "correction": "Increase to minimum 6m² (recommend 6.5m² for margin)"
+        },
+        {
+          "mistake": "Using 2.1m ceiling height",
+          "consequence": "BR18-5.1.1 violation - habitable room requires ≥2.30m",
+          "correction": "Increase to 2.30m minimum (recommend 2.35-2.50m)"
+        },
+        {
+          "mistake": "Window area 0.5m² (7.7% of floor)",
+          "consequence": "BR23 violation - insufficient natural light",
+          "correction": "Increase window size to ≥0.65m² (10% of 6.5m²)"
+        }
+      ]
+    },
+
+    {
+      "id": "room_bedroom_comfortable_002",
+      "category": "Room Areas (BR18-5.2.x)",
+      "regulation": "BR18-5.2.3",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "Create a comfortable master bedroom with ample space",
+        "context": "Residential apartment, modern design"
+      },
+      "output": {
+        "blueprint_fragment": {
+          "room": {
+            "id": "r_master",
+            "label": "Master Bedroom",
+            "area": { "value": 15.0, "unit": "m²" },
+            "polygon": [
+              { "x": 0.5, "y": 0.5 },
+              { "x": 5.5, "y": 0.5 },
+              { "x": 5.5, "y": 3.5 },
+              { "x": 0.5, "y": 3.5 }
+            ],
+            "ceilingHeight": 2.5,
+            "flooring": "oak-parquet"
+          },
+          "windows": [
+            {
+              "id": "w1",
+              "wallId": "w_ext_south",
+              "type": "window",
+              "width": 1.5,
+              "height": 1.5,
+              "distFromStart": 1.0
+            },
+            {
+              "id": "w2",
+              "wallId": "w_ext_east",
+              "type": "window",
+              "width": 1.2,
+              "height": 1.5,
+              "distFromStart": 0.8
+            }
+          ]
+        },
+        "compliance_validation": {
+          "room_area_check": {
+            "measured": 15.0,
+            "minimum_required": 6.0,
+            "code_reference": "BR18-5.2.3",
+            "status": "PASS",
+            "margin": 9.0,
+            "explanation": "Master bedroom 15m² significantly exceeds minimum 6m² (250% of requirement)"
+          },
+          "ceiling_height_check": {
+            "measured": 2.5,
+            "minimum_required": 2.30,
+            "code_reference": "BR18-5.1.1",
+            "status": "PASS",
+            "margin": 0.2,
+            "explanation": "Generous 2.5m ceiling height provides spacious feel"
+          },
+          "natural_light_check": {
+            "window_area": 4.05,
+            "floor_area": 15.0,
+            "ratio": 0.27,
+            "minimum_required_ratio": 0.10,
+            "code_reference": "BR23",
+            "status": "PASS",
+            "explanation": "Two windows totaling 4.05m² = 27% of floor area (excellent natural light)"
+          }
+        }
+      }
+    },
+
+    {
+      "id": "room_living_minimum_003",
+      "category": "Room Areas (BR18-5.2.x)",
+      "regulation": "BR18-5.2.1",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "Design a living room meeting minimum BR18 requirements",
+        "context": "Compact apartment"
+      },
+      "output": {
+        "blueprint_fragment": {
+          "room": {
+            "id": "r_living",
+            "label": "Living Room",
+            "area": { "value": 10.5, "unit": "m²" },
+            "polygon": [
+              { "x": 0.5, "y": 0.5 },
+              { "x": 3.8, "y": 0.5 },
+              { "x": 3.8, "y": 3.7 },
+              { "x": 0.5, "y": 3.7 }
+            ],
+            "ceilingHeight": 2.4,
+            "flooring": "oak-parquet"
+          },
+          "windows": [
+            {
+              "id": "w1",
+              "wallId": "w_ext",
+              "type": "window",
+              "width": 2.0,
+              "height": 1.5,
+              "distFromStart": 0.7
+            }
+          ]
+        },
+        "compliance_validation": {
+          "room_area_check": {
+            "measured": 10.5,
+            "minimum_required": 10.0,
+            "code_reference": "BR18-5.2.1",
+            "status": "PASS",
+            "margin": 0.5,
+            "explanation": "Living room 10.5m² meets minimum 10m² requirement"
+          },
+          "natural_light_check": {
+            "window_area": 3.0,
+            "floor_area": 10.5,
+            "ratio": 0.286,
+            "minimum_required_ratio": 0.10,
+            "code_reference": "BR23",
+            "status": "PASS",
+            "explanation": "Window 3.0m² = 28.6% of floor (generous natural light)"
+          }
+        }
+      },
+      "common_mistakes": [
+        {
+          "mistake": "Using 9m² for living room",
+          "consequence": "BR18-5.2.1 violation - minimum is 10m²",
+          "correction": "Increase to at least 10m² (recommend 10.5-12m² for comfort)"
+        }
+      ]
+    },
+
+    {
+      "id": "room_kitchen_minimum_004",
+      "category": "Room Areas (BR18-5.2.x)",
+      "regulation": "BR18-5.2.2",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "Create a functional kitchen with minimum dimensions",
+        "context": "Galley kitchen layout"
+      },
+      "output": {
+        "blueprint_fragment": {
+          "room": {
+            "id": "r_kitchen",
+            "label": "Kitchen",
+            "area": { "value": 4.5, "unit": "m²" },
+            "polygon": [
+              { "x": 0.5, "y": 0.5 },
+              { "x": 2.5, "y": 0.5 },
+              { "x": 2.5, "y": 2.75 },
+              { "x": 0.5, "y": 2.75 }
+            ],
+            "ceilingHeight": 2.3,
+            "flooring": "tiles"
+          },
+          "windows": [
+            {
+              "id": "w1",
+              "wallId": "w_ext",
+              "type": "window",
+              "width": 0.8,
+              "height": 1.2,
+              "distFromStart": 0.6
+            }
+          ]
+        },
+        "compliance_validation": {
+          "room_area_check": {
+            "measured": 4.5,
+            "minimum_required": 4.0,
+            "code_reference": "BR18-5.2.2",
+            "status": "PASS",
+            "margin": 0.5,
+            "explanation": "Kitchen 4.5m² exceeds minimum 4m²"
+          },
+          "natural_light_check": {
+            "window_area": 0.96,
+            "floor_area": 4.5,
+            "ratio": 0.213,
+            "minimum_required_ratio": 0.10,
+            "code_reference": "BR23",
+            "status": "PASS",
+            "explanation": "Window 0.96m² = 21.3% of floor (good natural light for kitchen)"
+          }
+        }
+      }
+    },
+
+    {
+      "id": "room_bathroom_full_005",
+      "category": "Room Areas (BR18-5.2.x)",
+      "regulation": "Bathroom Standards",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "Design a full bathroom with toilet, sink, and shower",
+        "context": "Standard residential bathroom"
+      },
+      "output": {
+        "blueprint_fragment": {
+          "room": {
+            "id": "r_bathroom",
+            "label": "Bathroom",
+            "area": { "value": 4.2, "unit": "m²" },
+            "polygon": [
+              { "x": 0.5, "y": 0.5 },
+              { "x": 2.6, "y": 0.5 },
+              { "x": 2.6, "y": 2.5 },
+              { "x": 0.5, "y": 2.5 }
+            ],
+            "ceilingHeight": 2.1,
+            "flooring": "waterproof-tiles"
+          },
+          "windows": [
+            {
+              "id": "w1",
+              "wallId": "w_ext",
+              "type": "window",
+              "width": 0.6,
+              "height": 0.8,
+              "distFromStart": 0.8,
+              "sillHeight": 1.5
+            }
+          ]
+        },
+        "compliance_validation": {
+          "room_area_check": {
+            "measured": 4.2,
+            "minimum_required": 4.0,
+            "code_reference": "Bathroom Standards",
+            "status": "PASS",
+            "margin": 0.2,
+            "explanation": "Full bathroom 4.2m² adequate for toilet + sink + shower"
+          },
+          "ceiling_height_check": {
+            "measured": 2.1,
+            "minimum_required": 2.1,
+            "code_reference": "BR18-5.1.1",
+            "status": "PASS",
+            "margin": 0.0,
+            "explanation": "Non-habitable room - 2.1m ceiling acceptable"
+          }
+        },
+        "design_notes": [
+          "Waterproof tiles throughout for moisture protection",
+          "Mechanical ventilation required (exhaust fan)",
+          "Door swings outward for emergency access",
+          "High sill window (1.5m) for privacy"
+        ]
+      }
+    },
+
+    {
+      "id": "ceiling_habitable_006",
+      "category": "Ceiling Heights (BR18-5.1.1)",
+      "regulation": "BR18-5.1.1",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "What ceiling height for a bedroom?",
+        "context": "New construction residential"
+      },
+      "output": {
+        "answer": "Bedrooms are habitable rooms and require minimum 2.30m ceiling height per BR18-5.1.1",
+        "compliance_data": {
+          "room_type": "Bedroom (habitable)",
+          "minimum_ceiling": 2.30,
+          "recommended_ceiling": 2.40,
+          "code_reference": "BR18-5.1.1",
+          "rationale": "Habitable rooms need ≥2.30m for adequate air volume and psychological comfort"
+        },
+        "example_values": [
+          { "height": 2.35, "status": "PASS", "note": "Minimum + 5cm margin" },
+          { "height": 2.40, "status": "PASS", "note": "Standard residential" },
+          { "height": 2.50, "status": "PASS", "note": "Generous/comfortable" },
+          { "height": 2.10, "status": "FAIL", "note": "Too low for habitable room" }
+        ]
+      },
+      "common_mistakes": [
+        {
+          "mistake": "Using 2.1m ceiling for bedroom",
+          "consequence": "BR18-5.1.1 violation - bedrooms are habitable rooms",
+          "correction": "Use minimum 2.30m for all habitable rooms"
+        }
+      ]
+    },
+
+    {
+      "id": "ceiling_non_habitable_007",
+      "category": "Ceiling Heights (BR18-5.1.1)",
+      "regulation": "BR18-5.1.1",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "What ceiling height for a bathroom?",
+        "context": "Standard residential bathroom"
+      },
+      "output": {
+        "answer": "Bathrooms are non-habitable rooms and require minimum 2.10m ceiling height per BR18-5.1.1",
+        "compliance_data": {
+          "room_type": "Bathroom (non-habitable)",
+          "minimum_ceiling": 2.10,
+          "recommended_ceiling": 2.10,
+          "code_reference": "BR18-5.1.1",
+          "rationale": "Non-habitable rooms used for short durations can have lower ceilings"
+        },
+        "example_values": [
+          { "height": 2.10, "status": "PASS", "note": "Minimum compliant" },
+          { "height": 2.20, "status": "PASS", "note": "Slightly generous" },
+          { "height": 2.00, "status": "FAIL", "note": "Too low even for non-habitable" }
+        ]
+      }
+    },
+
+    {
+      "id": "ceiling_sloped_008",
+      "category": "Ceiling Heights (BR18-5.1.1)",
+      "regulation": "BR18-5.1.1",
+      "difficulty": "intermediate",
+      "input": {
+        "user_request": "How to calculate ceiling height for sloped/vaulted ceiling?",
+        "context": "Attic bedroom with sloped ceiling"
+      },
+      "output": {
+        "answer": "For sloped ceilings, calculate AVERAGE height: (lowest point + highest point) / 2",
+        "compliance_data": {
+          "calculation_method": "Average height",
+          "minimum_average": 2.30,
+          "minimum_lowest_point": 2.10,
+          "code_reference": "BR18-5.1.1"
+        },
+        "example_calculation": {
+          "lowest_point": 2.10,
+          "highest_point": 3.50,
+          "average": 2.80,
+          "status": "PASS",
+          "explanation": "(2.10 + 3.50) / 2 = 2.80m ≥ 2.30m ✓"
+        }
+      }
+    },
+
+    {
+      "id": "ceiling_floor_to_floor_009",
+      "category": "Ceiling Heights (BR18-5.1.1)",
+      "regulation": "BR18-5.1.1",
+      "difficulty": "intermediate",
+      "input": {
+        "user_request": "If floor-to-floor is 2.70m, what's the ceiling height?",
+        "context": "Accounting for structure and finishes"
+      },
+      "output": {
+        "answer": "Net ceiling height = floor-to-floor minus structure/finishes",
+        "calculation": {
+          "floor_to_floor": 2.70,
+          "structural_slab": 0.25,
+          "services_hvac": 0.05,
+          "ceiling_finish": 0.05,
+          "floor_finish": 0.05,
+          "total_deductions": 0.40,
+          "net_ceiling_height": 2.30,
+          "status": "PASS"
+        },
+        "explanation": "2.70m - 0.40m (structure/finishes) = 2.30m net ceiling ✓"
+      },
+      "common_mistakes": [
+        {
+          "mistake": "Assuming floor-to-floor = ceiling height",
+          "consequence": "Actual ceiling will be too low after construction",
+          "correction": "Always deduct 0.35-0.45m for structure and finishes"
+        }
+      ]
+    },
+
+    {
+      "id": "door_width_minimum_010",
+      "category": "Door Widths (BR18-3.1.1)",
+      "regulation": "BR18-3.1.1",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "What is the minimum door width for accessibility?",
+        "context": "All interior doors"
+      },
+      "output": {
+        "answer": "Minimum 0.77m CLEAR WIDTH (0.9m nominal door leaf recommended)",
+        "compliance_data": {
+          "clear_width_minimum": 0.77,
+          "nominal_door_recommended": 0.9,
+          "code_reference": "BR18-3.1.1",
+          "applies_to": "ALL doors (interior, bathroom, entrance)"
+        },
+        "calculation": {
+          "nominal_door_leaf": 0.90,
+          "door_frame_both_sides": 0.08,
+          "door_stop_weatherstrip": 0.05,
+          "clear_opening": 0.77,
+          "status": "PASS"
+        },
+        "rationale": "Wheelchair width 0.65m + hands/controls 0.10m + safety margin 0.02m = 0.77m"
+      },
+      "common_mistakes": [
+        {
+          "mistake": "Using 0.7m or 0.8m door",
+          "consequence": "Clear width will be <0.77m - accessibility violation",
+          "correction": "Use 0.9m nominal door to achieve 0.77m clear width"
+        }
+      ]
+    },
+
+    {
+      "id": "door_width_entrance_011",
+      "category": "Door Widths (BR18-3.1.1)",
+      "regulation": "BR18-3.1.1",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "What width for entrance/front door?",
+        "context": "Main apartment entrance"
+      },
+      "output": {
+        "answer": "Minimum 1.0m nominal width for entrance doors",
+        "compliance_data": {
+          "nominal_width": 1.0,
+          "clear_width": 0.87,
+          "code_reference": "BR18-3.1.1 + Best Practice",
+          "rationale": "Wider for moving furniture, wheelchair + attendant, emergency stretcher access"
+        },
+        "door_specification": {
+          "id": "d_entrance",
+          "type": "door",
+          "width": 1.0,
+          "height": 2.1,
+          "threshold": 0.02,
+          "fire_rating": "EI 30",
+          "swing": "inward"
+        }
+      }
+    },
+
+    {
+      "id": "door_bathroom_swing_012",
+      "category": "Door Widths (BR18-3.1.1)",
+      "regulation": "BR18-3.1.1 + Safety",
+      "difficulty": "intermediate",
+      "input": {
+        "user_request": "Which direction should bathroom door swing?",
+        "context": "Safety and accessibility considerations"
+      },
+      "output": {
+        "answer": "Bathroom doors should swing OUTWARD for emergency access",
+        "compliance_data": {
+          "minimum_width": 0.77,
+          "recommended_width": 0.80,
+          "swing_direction": "outward",
+          "rationale": "If person falls and blocks door, rescuers can still open from outside"
+        },
+        "door_specification": {
+          "id": "d_bathroom",
+          "type": "door",
+          "width": 0.8,
+          "height": 2.1,
+          "swing": "outward",
+          "lock_type": "privacy_with_emergency_release"
+        }
+      }
+    },
+
+    {
+      "id": "window_natural_light_basic_013",
+      "category": "Natural Light Calculations (BR23)",
+      "regulation": "BR23",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "Calculate natural light requirement for 15m² bedroom",
+        "context": "BR23 compliance"
+      },
+      "output": {
+        "calculation": {
+          "room_floor_area": 15.0,
+          "minimum_ratio": 0.10,
+          "minimum_window_area": 1.5,
+          "recommended_window_area": 2.0,
+          "code_reference": "BR23"
+        },
+        "window_options": [
+          {
+            "description": "Single medium window",
+            "width": 1.2,
+            "height": 1.5,
+            "area": 1.8,
+            "ratio": 0.12,
+            "status": "PASS"
+          },
+          {
+            "description": "Two small windows",
+            "total_area": 2.0,
+            "ratio": 0.133,
+            "status": "PASS"
+          },
+          {
+            "description": "One small window (TOO SMALL)",
+            "width": 1.0,
+            "height": 1.0,
+            "area": 1.0,
+            "ratio": 0.067,
+            "status": "FAIL"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "window_external_only_014",
+      "category": "Window Placement (BR23)",
+      "regulation": "BR23",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "Can I place a window in an interior wall?",
+        "context": "Bedroom to hallway"
+      },
+      "output": {
+        "answer": "NO - Windows must be in EXTERNAL walls only",
+        "compliance_data": {
+          "rule": "Windows only in walls with isExternal: true",
+          "code_reference": "BR23",
+          "violations": [
+            "No actual daylight (hallway is interior)",
+            "Privacy violation",
+            "Acoustic leak",
+            "Structural weakness"
+          ]
+        },
+        "correct_example": {
+          "id": "w1",
+          "wallId": "w_exterior_south",
+          "type": "window",
+          "width": 1.2,
+          "height": 1.5,
+          "wall_properties": {
+            "isExternal": true,
+            "type": "EXTERIOR_INSULATED"
+          }
+        },
+        "incorrect_example": {
+          "id": "w_wrong",
+          "wallId": "w_partition_interior",
+          "type": "window",
+          "violation": "Wall is not external - INVALID",
+          "wall_properties": {
+            "isExternal": false,
+            "type": "INTERIOR_PARTITION"
+          }
+        }
+      }
+    },
+
+    {
+      "id": "window_sill_height_015",
+      "category": "Window Placement (BR23)",
+      "regulation": "BR23 + Safety",
+      "difficulty": "intermediate",
+      "input": {
+        "user_request": "What is the correct window sill height?",
+        "context": "Standard bedroom window"
+      },
+      "output": {
+        "answer": "Sill height should be 0.9-1.2m for most rooms",
+        "compliance_data": {
+          "minimum_sill": 0.9,
+          "maximum_sill": 1.2,
+          "rationale": {
+            "minimum": "Furniture clearance (desk, bed 0.75-0.85m tall)",
+            "maximum": "View requirement (seated person eye height)"
+          }
+        },
+        "special_cases": {
+          "bathroom": {
+            "sill_height": 1.5,
+            "reason": "Privacy"
+          },
+          "emergency_egress": {
+            "sill_height": 1.0,
+            "max_sill": 1.2,
+            "reason": "Must be reachable for escape"
+          }
+        }
+      }
+    },
+
+    {
+      "id": "wall_exterior_thickness_016",
+      "category": "Wall Construction",
+      "regulation": "Structural + Thermal Standards",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "What thickness for exterior walls?",
+        "context": "Brick exterior with insulation"
+      },
+      "output": {
+        "answer": "Exterior insulated walls: 0.40-0.50m thick",
+        "wall_specification": {
+          "type": "EXTERIOR_INSULATED",
+          "thickness": 0.45,
+          "material": "brick",
+          "composition": {
+            "exterior_brick": 0.11,
+            "air_cavity": 0.04,
+            "insulation": 0.25,
+            "vapor_barrier": 0.001,
+            "interior_gypsum": 0.04,
+            "total": 0.45
+          },
+          "performance": {
+            "u_value": 0.15,
+            "fire_rating": "REI 60",
+            "acoustic_rating": "45 dB"
+          },
+          "isExternal": true,
+          "layer": "A-WALL"
+        }
+      }
+    },
+
+    {
+      "id": "wall_load_bearing_017",
+      "category": "Wall Construction",
+      "regulation": "Structural Standards",
+      "difficulty": "intermediate",
+      "input": {
+        "user_request": "Specification for load-bearing interior wall?",
+        "context": "Central spine wall supporting floor above"
+      },
+      "output": {
+        "answer": "Load-bearing interior walls: 0.30-0.40m thick concrete",
+        "wall_specification": {
+          "type": "LOAD_BEARING",
+          "thickness": 0.35,
+          "material": "concrete",
+          "composition": {
+            "reinforced_concrete": 0.30,
+            "plaster_both_sides": 0.05,
+            "total": 0.35
+          },
+          "structural_requirements": {
+            "compressive_strength": "≥20 MPa (C20/25)",
+            "reinforcement": "Ø8mm @ 200mm spacing",
+            "fire_rating": "REI 60",
+            "acoustic_rating": "52 dB"
+          },
+          "isExternal": false,
+          "layer": "A-WALL"
+        }
+      }
+    },
+
+    {
+      "id": "wall_partition_018",
+      "category": "Wall Construction",
+      "regulation": "Partition Standards",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "What thickness for interior partition walls?",
+        "context": "Dividing rooms within apartment"
+      },
+      "output": {
+        "answer": "Interior partitions: 0.10-0.20m thick (gasbeton or gypsum board)",
+        "wall_options": [
+          {
+            "type": "INTERIOR_PARTITION",
+            "thickness": 0.15,
+            "material": "gasbeton",
+            "composition": {
+              "aac_blocks": 0.15,
+              "plaster": 0.02,
+              "total": 0.17
+            },
+            "fire_rating": "EI 30",
+            "acoustic_rating": "42 dB"
+          },
+          {
+            "type": "INTERIOR_PARTITION",
+            "thickness": 0.12,
+            "material": "gypsum_board",
+            "composition": {
+              "gypsum_both_sides": 0.025,
+              "steel_studs": 0.07,
+              "insulation": 0.07,
+              "total": 0.12
+            },
+            "fire_rating": "EI 30",
+            "acoustic_rating": "40 dB"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "wall_connectivity_019",
+      "category": "Wall Construction",
+      "regulation": "Structural Integrity",
+      "difficulty": "intermediate",
+      "input": {
+        "user_request": "How to ensure walls connect properly?",
+        "context": "Preventing structural failures"
+      },
+      "output": {
+        "answer": "All walls must form CLOSED LOOPS with exact coordinate alignment",
+        "connectivity_rules": {
+          "rule_1": "Wall endpoints must align EXACTLY (no gaps)",
+          "rule_2": "All walls form closed loops or connect to structure",
+          "rule_3": "Maximum gap tolerance: 0.000m",
+          "rule_4": "Use consistent decimal precision"
+        },
+        "correct_example": {
+          "description": "10m × 8m rectangle",
+          "walls": [
+            {
+              "id": "w1",
+              "start": { "x": 0, "y": 0 },
+              "end": { "x": 10, "y": 0 }
+            },
+            {
+              "id": "w2",
+              "start": { "x": 10, "y": 0 },
+              "end": { "x": 10, "y": 8 }
+            },
+            {
+              "id": "w3",
+              "start": { "x": 10, "y": 8 },
+              "end": { "x": 0, "y": 8 }
+            },
+            {
+              "id": "w4",
+              "start": { "x": 0, "y": 8 },
+              "end": { "x": 0, "y": 0 }
+            }
+          ],
+          "validation": "CLOSED LOOP ✓ (w4.end === w1.start)"
+        },
+        "incorrect_example": {
+          "description": "Gap in loop",
+          "walls": [
+            {
+              "id": "w1",
+              "start": { "x": 0, "y": 0 },
+              "end": { "x": 10, "y": 0 }
+            },
+            {
+              "id": "w2",
+              "start": { "x": 10.1, "y": 0 },
+              "end": { "x": 10.1, "y": 8 }
+            }
+          ],
+          "violation": "Gap of 0.1m - structural failure risk ✗"
+        }
+      }
+    },
+
+    {
+      "id": "fire_egress_general_020",
+      "category": "Fire Safety/Egress (BR18-5.4.1)",
+      "regulation": "BR18-5.4.1",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "What is maximum egress distance from any room?",
+        "context": "General fire safety rule"
+      },
+      "output": {
+        "answer": "Maximum 25m to nearest exit from any point (measured along walkable path)",
+        "compliance_data": {
+          "general_rooms_max": 25,
+          "bedrooms_max": 15,
+          "measurement_method": "Shortest walkable path (not straight-line)",
+          "code_reference": "BR18-5.4.1"
+        },
+        "example_calculation": {
+          "point": "Far corner of living room",
+          "path": [
+            { "segment": "Living room to hallway", "distance": 4 },
+            { "segment": "Along hallway", "distance": 8 },
+            { "segment": "Through entrance", "distance": 3 }
+          ],
+          "total_distance": 15,
+          "limit": 25,
+          "status": "PASS"
+        }
+      }
+    },
+
+    {
+      "id": "fire_egress_bedroom_021",
+      "category": "Fire Safety/Egress (BR18-5.4.1)",
+      "regulation": "BR18-5.4.1",
+      "difficulty": "intermediate",
+      "input": {
+        "user_request": "What is maximum egress distance for bedrooms specifically?",
+        "context": "Stricter bedroom egress rules"
+      },
+      "output": {
+        "answer": "Maximum 15m to nearest exit for bedrooms (stricter than general 25m rule)",
+        "compliance_data": {
+          "bedroom_max_distance": 15,
+          "rationale": "People sleep in bedrooms - delayed fire awareness, need faster escape",
+          "code_reference": "BR18-5.4.1"
+        },
+        "example_calculation": {
+          "bedroom_location": "Master bedroom",
+          "path": [
+            { "segment": "Bedroom to door", "distance": 2 },
+            { "segment": "Hallway", "distance": 6 },
+            { "segment": "Entrance area", "distance": 2 }
+          ],
+          "total_distance": 10,
+          "limit": 15,
+          "status": "PASS"
+        },
+        "violation_example": {
+          "bedroom_location": "Far end of apartment",
+          "total_distance": 19,
+          "limit": 15,
+          "status": "FAIL",
+          "solutions": [
+            "Relocate bedroom closer to exit",
+            "Add emergency escape window (≥0.5m × 0.6m, sill ≤1.2m)",
+            "Create second exit route"
+          ]
+        }
+      }
+    },
+
+    {
+      "id": "fire_emergency_window_022",
+      "category": "Fire Safety/Egress (BR18-5.4.1)",
+      "regulation": "BR18-5.4.1 + BR23-§106-109",
+      "difficulty": "intermediate",
+      "input": {
+        "user_request": "Specification for emergency escape window in bedroom?",
+        "context": "Bedroom exceeds 15m egress distance"
+      },
+      "output": {
+        "answer": "Emergency escape window: minimum 0.5m × 0.6m opening, sill ≤1.2m",
+        "window_specification": {
+          "id": "w_egress",
+          "wallId": "w_exterior",
+          "type": "window",
+          "width": 0.6,
+          "height": 1.0,
+          "sillHeight": 1.0,
+          "openingType": "casement",
+          "emergencyEgress": true,
+          "clearOpening": {
+            "width": 0.55,
+            "height": 0.95,
+            "area": 0.52,
+            "minimum_required": 0.30
+          }
+        },
+        "requirements": {
+          "minimum_width": 0.5,
+          "minimum_height": 0.6,
+          "minimum_area": 0.30,
+          "maximum_sill_height": 1.2,
+          "opening_force": "<30 N",
+          "no_tools_required": true,
+          "clear_to_ground": true
+        }
+      }
+    },
+
+    {
+      "id": "fire_exit_door_023",
+      "category": "Fire Safety/Egress (BR18-5.4.1)",
+      "regulation": "BR18-5.4.1",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "Requirements for exit doors?",
+        "context": "Primary apartment exit"
+      },
+      "output": {
+        "answer": "Exit door minimum 0.9m wide, fire-rated, opens outward",
+        "door_specification": {
+          "id": "d_exit_primary",
+          "type": "door",
+          "width": 1.0,
+          "height": 2.1,
+          "fireRating": "EI 30",
+          "openingDirection": "outward",
+          "panicHardware": false,
+          "emergencyLighting": true
+        },
+        "requirements": {
+          "minimum_width": 0.9,
+          "fire_rating": "EI 30 (30 minutes)",
+          "swing_direction": "Outward (into stairwell/exterior)",
+          "self_closing": "Required for multi-unit buildings",
+          "smoke_seal": "Intumescent strips"
+        }
+      }
+    },
+
+    {
+      "id": "fire_hallway_width_024",
+      "category": "Fire Safety/Egress (BR18-5.4.1)",
+      "regulation": "BR18-3.2.1",
+      "difficulty": "basic",
+      "input": {
+        "user_request": "Minimum hallway width for egress?",
+        "context": "Fire safety and accessibility"
+      },
+      "output": {
+        "answer": "Minimum 0.9m hallway width (1.2m recommended for rapid evacuation)",
+        "compliance_data": {
+          "minimum_width": 0.9,
+          "recommended_width": 1.2,
+          "code_reference": "BR18-3.2.1",
+          "dual_purpose": "Accessibility (wheelchair) + Fire egress (rapid evacuation)"
+        },
+        "hallway_requirements": {
+          "width": 1.0,
+          "ceiling_height": 2.10,
+          "obstructions": "None allowed",
+          "emergency_lighting": "Required if interior hallway",
+          "smoke_detection": "Every 10m"
+        }
+      }
+    }
+  ],
+
+  "common_errors": [
+    {
+      "error_id": "err_001",
+      "category": "Room Areas",
+      "error_description": "Bedroom area below 6m² minimum",
+      "incorrect": {
+        "area": 5.2,
+        "dimensions": "2.0m × 2.6m"
+      },
+      "correct": {
+        "area": 6.5,
+        "dimensions": "2.5m × 2.6m"
+      },
+      "regulation": "BR18-5.2.3",
+      "explanation": "Bedrooms must be ≥6m² to accommodate standard double bed (1.4×2.0m) + circulation space + storage",
+      "severity": "CRITICAL"
+    },
+    {
+      "error_id": "err_002",
+      "category": "Room Areas",
+      "error_description": "Living room area below 10m² minimum",
+      "incorrect": {
+        "area": 9.0,
+        "dimensions": "3.0m × 3.0m"
+      },
+      "correct": {
+        "area": 10.5,
+        "dimensions": "3.0m × 3.5m"
+      },
+      "regulation": "BR18-5.2.1",
+      "explanation": "Living rooms require ≥10m² for sofa, furniture, and circulation space",
+      "severity": "CRITICAL"
+    },
+    {
+      "error_id": "err_003",
+      "category": "Room Areas",
+      "error_description": "Kitchen area below 4m² minimum",
+      "incorrect": {
+        "area": 3.5,
+        "dimensions": "1.75m × 2.0m"
+      },
+      "correct": {
+        "area": 4.5,
+        "dimensions": "2.0m × 2.25m"
+      },
+      "regulation": "BR18-5.2.2",
+      "explanation": "Kitchens need ≥4m² for cabinets, appliances, and work triangle",
+      "severity": "CRITICAL"
+    },
+    {
+      "error_id": "err_004",
+      "category": "Ceiling Heights",
+      "error_description": "Habitable room ceiling below 2.30m",
+      "incorrect": {
+        "room_type": "Bedroom",
+        "ceiling_height": 2.10
+      },
+      "correct": {
+        "room_type": "Bedroom",
+        "ceiling_height": 2.35
+      },
+      "regulation": "BR18-5.1.1",
+      "explanation": "Habitable rooms (bedrooms, living rooms, kitchens) require ≥2.30m ceiling for adequate air volume",
+      "severity": "CRITICAL"
+    },
+    {
+      "error_id": "err_005",
+      "category": "Ceiling Heights",
+      "error_description": "Using habitable standard for non-habitable room (waste)",
+      "incorrect": {
+        "room_type": "Bathroom",
+        "ceiling_height": 2.40
+      },
+      "correct": {
+        "room_type": "Bathroom",
+        "ceiling_height": 2.10
+      },
+      "regulation": "BR18-5.1.1",
+      "explanation": "Non-habitable rooms (bathrooms, storage) only need ≥2.10m - higher ceilings waste construction cost",
+      "severity": "MINOR"
+    },
+    {
+      "error_id": "err_006",
+      "category": "Door Widths",
+      "error_description": "Door width below accessibility minimum",
+      "incorrect": {
+        "door_width": 0.70,
+        "clear_width": 0.62
+      },
+      "correct": {
+        "door_width": 0.90,
+        "clear_width": 0.77
+      },
+      "regulation": "BR18-3.1.1",
+      "explanation": "ALL doors must provide ≥0.77m clear width for wheelchair accessibility",
+      "severity": "CRITICAL"
+    },
+    {
+      "error_id": "err_007",
+      "category": "Door Widths",
+      "error_description": "Entrance door too narrow",
+      "incorrect": {
+        "door_width": 0.80
+      },
+      "correct": {
+        "door_width": 1.00
+      },
+      "regulation": "BR18-3.1.1 + Best Practice",
+      "explanation": "Entrance doors should be ≥1.0m for moving furniture, wheelchair + attendant, emergency stretcher",
+      "severity": "MAJOR"
+    },
+    {
+      "error_id": "err_008",
+      "category": "Natural Light",
+      "error_description": "Window area below 10% of floor area",
+      "incorrect": {
+        "room_area": 15.0,
+        "window_area": 1.0,
+        "ratio": 0.067
+      },
+      "correct": {
+        "room_area": 15.0,
+        "window_area": 1.8,
+        "ratio": 0.12
+      },
+      "regulation": "BR23",
+      "explanation": "All habitable rooms require window area ≥10% of floor area for natural light and health",
+      "severity": "CRITICAL"
+    },
+    {
+      "error_id": "err_009",
+      "category": "Window Placement",
+      "error_description": "Window in interior partition wall",
+      "incorrect": {
+        "wall_type": "INTERIOR_PARTITION",
+        "isExternal": false
+      },
+      "correct": {
+        "wall_type": "EXTERIOR_INSULATED",
+        "isExternal": true
+      },
+      "regulation": "BR23",
+      "explanation": "Windows must be in external walls only to provide actual daylight from outdoors",
+      "severity": "CRITICAL"
+    },
+    {
+      "error_id": "err_010",
+      "category": "Wall Connectivity",
+      "error_description": "Wall endpoints don't align (gap)",
+      "incorrect": {
+        "wall1_end": { "x": 10.0, "y": 0 },
+        "wall2_start": { "x": 10.1, "y": 0 },
+        "gap": 0.1
+      },
+      "correct": {
+        "wall1_end": { "x": 10.0, "y": 0 },
+        "wall2_start": { "x": 10.0, "y": 0 },
+        "gap": 0.0
+      },
+      "regulation": "Structural Integrity",
+      "explanation": "Walls must form closed loops with exact coordinate alignment - gaps cause structural failure",
+      "severity": "CRITICAL"
+    },
+    {
+      "error_id": "err_011",
+      "category": "Fire Safety",
+      "error_description": "Bedroom egress distance exceeds 15m",
+      "incorrect": {
+        "room_type": "Bedroom",
+        "egress_distance": 19.0,
+        "limit": 15.0
+      },
+      "correct": {
+        "solution_1": "Relocate bedroom closer (10m egress)",
+        "solution_2": "Add emergency escape window (0.6m × 1.0m, sill 1.0m)"
+      },
+      "regulation": "BR18-5.4.1",
+      "explanation": "Bedrooms have stricter 15m egress limit (vs 25m general) due to sleeping occupants",
+      "severity": "CRITICAL"
+    },
+    {
+      "error_id": "err_012",
+      "category": "Fire Safety",
+      "error_description": "Emergency escape window too small",
+      "incorrect": {
+        "opening_width": 0.4,
+        "opening_height": 0.5,
+        "area": 0.20
+      },
+      "correct": {
+        "opening_width": 0.55,
+        "opening_height": 0.65,
+        "area": 0.36
+      },
+      "regulation": "BR18-5.4.1",
+      "explanation": "Emergency escape windows require ≥0.5m × 0.6m opening (0.30m² area) for adult to escape",
+      "severity": "CRITICAL"
+    }
+  ],
+
+  "complete_floor_plans": [
+    {
+      "plan_id": "plan_001",
+      "name": "Compact 2-Bedroom Apartment",
+      "total_area": 85,
+      "compliance_status": "PASS",
+      "description": "Modern 2-bedroom apartment with open-plan living area, designed for full BR18/BR23 compliance",
+      "rooms": [
+        {
+          "id": "r_living",
+          "label": "Living/Dining/Kitchen",
+          "area": 42.0,
+          "ceiling_height": 2.5,
+          "compliance": "BR18-5.2.1: 42m² ≫ 10m² minimum ✓"
+        },
+        {
+          "id": "r_master",
+          "label": "Master Bedroom",
+          "area": 12.0,
+          "ceiling_height": 2.4,
+          "compliance": "BR18-5.2.3: 12m² ≫ 6m² minimum ✓"
+        },
+        {
+          "id": "r_bedroom2",
+          "label": "Bedroom 2",
+          "area": 10.0,
+          "ceiling_height": 2.4,
+          "compliance": "BR18-5.2.3: 10m² ≫ 6m² minimum ✓"
+        },
+        {
+          "id": "r_bathroom",
+          "label": "Bathroom",
+          "area": 4.5,
+          "ceiling_height": 2.1,
+          "compliance": "4.5m² ≥ 4m² (full bathroom) ✓"
+        },
+        {
+          "id": "r_hallway",
+          "label": "Entrance Hallway",
+          "area": 6.5,
+          "ceiling_height": 2.4,
+          "width": 1.5,
+          "compliance": "Width 1.5m ≫ 0.9m minimum ✓"
+        }
+      ],
+      "windows": [
+        {
+          "room": "Living area",
+          "count": 1,
+          "area": 3.6,
+          "floor_area": 42.0,
+          "ratio": 0.086,
+          "note": "Multiple windows recommended - total 5.4m² = 12.9% ✓"
+        },
+        {
+          "room": "Master Bedroom",
+          "count": 1,
+          "area": 1.8,
+          "floor_area": 12.0,
+          "ratio": 0.15,
+          "compliance": "15% ≥ 10% ✓"
+        },
+        {
+          "room": "Bedroom 2",
+          "count": 1,
+          "area": 1.8,
+          "floor_area": 10.0,
+          "ratio": 0.18,
+          "compliance": "18% ≥ 10% ✓"
+        }
+      ],
+      "egress_analysis": {
+        "master_bedroom_to_exit": 6,
+        "bedroom2_to_exit": 8,
+        "compliance": "Both bedrooms <15m ✓"
+      }
+    }
+  ]
+}
